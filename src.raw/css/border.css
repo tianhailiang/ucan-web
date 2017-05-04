@@ -1,0 +1,70 @@
+.content{
+	width: 100%;
+	background-color: white;
+}
+.frame-nav{
+	height: 42px;
+	line-height: 42px;
+	margin-bottom: 35px;
+}
+.frame-nav ul li a{
+	display: block;
+	width: 100px;
+	text-align: center;
+	position: relative;
+}
+
+/*向上三角*/
+.triangle-border-up{
+	display:block;
+	width:0;
+	height:0;
+	border-width:0 10px 10px;
+	border-style:solid;
+	border-color:transparent transparent #fff;
+	position: absolute;
+	bottom: -1px;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.frame-title{
+	width: 150px;
+	margin-right: 44px;
+}
+.frame-head{
+	height: 210px;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 26px;
+}
+.frame-user{
+	height: 60px;
+	line-height: 26px;
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+	color: #fff2b8;
+}
+.left-nva{
+	width: 100%;
+}
+.left-nva ul li{
+	border-radius: 0 10px 10px 0;
+}
+.left-nva ul li a{
+	display: block;
+	height: 34px;
+	width: 110px;
+	line-height: 34px;
+	padding-left: 40px;
+	font-weight: 600;
+}
+.left-nva ul li{
+	margin-bottom: 15px;
+}
+.frame-rg{
+	width: 1060px;
+	min-height: 700px;
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 40px;
+}

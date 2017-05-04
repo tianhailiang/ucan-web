@@ -1,0 +1,166 @@
+#result{
+	position: absolute;
+	width:300px;
+	height:150px;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-75px;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+.pink{
+	color:#eb6100;
+}
+.span_content p{
+	height:20px;
+}
+p{
+	font-size:24px;
+	margin:0;
+}
+#page{
+	margin:50px;
+}
+.course{
+	width:100%;
+	min-height:300px;
+	border-bottom:1px solid #dcdcdc;
+}
+.course img{
+	margin-top:50px;
+	width:280px;
+	height:200px;
+	float:left;
+}
+.course_content{
+	margin-top:50px;
+	padding-left: 20px;
+	width:750px;
+	height:200px;
+	float:left;
+}
+.course_content span{
+	line-height: 25px;
+	font-size: 14px;
+}
+span#price{
+	color:#b6e68a;
+	font-size: 24px;
+	margin-top:15px;
+}
+input{
+	float:right;
+	margin-bottom:0;
+	width:200px;
+	height:40px;
+	border-radius: 10px;
+	border:none;
+	color:wheat;
+	font-size:20px;
+	cursor: pointer;
+}
+input[type='button'].btn{
+	color: #fff;
+}
+#content{
+	width:1060px;
+	min-height: 700px;
+	margin:auto;
+	
+}
+.page_content{
+	min-height: 700px;
+}
+
+.teacher{
+	height:auto;
+	min-height:300px;
+	border-bottom:1px solid #dcdcdc;
+}
+.teacher img.img{
+	margin-top:50px;
+	width:200px;
+	height:200px;
+	float:left;
+}
+.span_content{
+	width:100%;
+	/*height:100px;*/
+	height:45px;
+	/*background-color: #009688;*/
+	overflow: hidden;
+	margin-top:50px;
+	padding:0;
+	/*margin-left:20px;*/
+}
+.span_content span{
+	display: inline;
+	margin-left:0;
+}
+span.price_t{
+	color:#b6e68a;
+	margin-top:15px;
+}
+span.persons{
+	color:#bababa;
+}
+span.about{
+	height:50px;
+}
+.span_content p{
+	font-size:14px;
+}
+span.slide{
+	cursor: pointer;
+}
+p.slide span{
+	margin-left:0;
+	cursor: pointer;
+}
+span.toggle{
+	display: inline-block;
+}
+p.slide img{
+	display: inline-block;
+}
+.icon-up{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: url("../img/up_03.png") no-repeat bottom;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+.rotate{
+	transform: rotate(180deg);
+	transition: all .3s;
+}
+/****************************************************************/
+input.laypage_skip{
+	width:50px;
+	color:black;
+	float:left;
+}
+button.laypage_btn{
+	line-height: 20px;
+	float:right;
+}
+
+
+
+
+
+/************twmay3.8添加**************/
+header{
+	border-bottom:1px solid #ddd;
+}
+.footer-bottom p{
+	font-size:14px;
+}
+.footer-bottom span {
+    display: inline;
+    color:#eee;
+}

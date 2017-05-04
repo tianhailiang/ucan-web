@@ -1,0 +1,101 @@
+<div class="classroom-main" id="classroom">
+    <div class="carousel-box">
+        <link rel="import" href="/modules/html/classroom/carousel/carousel.html?__inline">
+    </div>
+
+    <h2 class="tl-title">全部课程 &gt;</h2>
+
+    <ul class="cul course-type">
+        <li><a href="#"
+               v-bind:class="{'cur': courseTopicsIds===navAllIds || courseTopicsIds===''}"
+               v-on:click.prevent="changeClassNav('')">全部课程</a></li>
+        <li v-for="(item, index) in navList"
+            ><a v-text="item.topic" href="#"
+            v-bind:class="{'cur': courseTopicsIds===item.id}"
+            v-on:click.prevent="changeClassNav(item.id)"
+        ></a></li>
+    </ul>
+
+    <div class="cul sort-type cf">
+        <ul class="main-sort-type">
+            <li><a href="javascript:;"
+            	v-bind:class="{'cur': filterType===''}"
+            	v-on:click.prevent="loadClass('')">综合排序</a></li>
+            <li><a href="javascript:;" v-bind:class="{'cur': filterType==='createdAt'}" v-on:click.prevent="loadClass('createdAt')">最新</a></li>
+            <li><a href="javascript:;" v-bind:class="{'cur': filterType==='score'}"  v-on:click.prevent="loadClass('score')">评分</a></li>
+            <li class="sort-type-price"><a v-bind:class="{'cur': filterType==='desc'||filterType==='asc'}" v-on:click.prevent="loadClass(isA ? 'desc' : 'asc')" href="javascript:;">价格
+                <span class="up"></span>
+                <span class="down"></span>
+            </a></li>
+            <li style="border: 1px solid rgb(220, 220, 220);height: 27px;padding: 0;margin: 0 10px;"></li>
+            <li class="price-range">
+                <a href="javascript:;">价格区间<span class="downT"></span></a>
+                <ul class="price-content">
+                    <li v-on:click="loadClass('0-99')">0--99</li>
+                    <li v-on:click="loadClass('100-199')">100--199</li>
+                    <li v-on:click="loadClass('200-299')">200--299</li>
+                    <li v-on:click="loadClass('300-9999')">300+</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="sort-type-plus">
+            <!--<li><span></span>直播课</li>
+            <li><span></span>精品课</li>-->
+            <li><input value="0" v-model="isBool" v-on:click="loadClass('live')" type="radio" /> 直播课</li>
+            <li><input value="1" v-model="isBool" v-on:click="loadClass('1')" type="radio" /> 精品课</li>
+            <!--<li><input value="ooo" v-model="isBool" v-on:click="loadClass('ooo')" type="radio" /> 一对一</li>-->
+        </ul>
+    </div>
+    
+    <div class="course-content">
+    	<img src="./img/result.png" alt="" />
+        <ul class="cf course-content-ul">
+            <li v-for="(item, index) in rows">
+<!--                <a v-on:click="Jump(item.id)">-->
+                <a v-bind:href="'./course.html?courseId=' + item.id ">
+                    <span class="img" v-bind:style="'background-size:100% 100%;background-image:url(' + item.ucanFile + ')'">
+                    	<span>
+                    		<i v-bind:class="'bg-cc' + item.topic.id" v-text="item.topic.topic"></i>
+                    		<em v-text="item.beginDate ? item.beginDate : '已结课'"></em>
+                    	</span>
+                    </span>
+                	<p class="fn-w6"><span class="cOoo" v-text="item.mode == 'ooo' ? '1对1' : '直播'">1对1</span><em v-text="item.name"></em></p>
+	                <a style="margin:0" v-bind:href="'./pages/teacherHome/teacherHome.html?teacherId=' + item.teacher.id">
+	                	<span class="join-num"><em>授课老师：</em><em v-text="item.teacher.name"></em></span>
+	                </a>
+	                <span class="fee" v-bind:class="{free:item.cost === 0 || item.cost == null}" v-text="item.cost ? '￥' + item.cost : '免费'"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="paginator">
+        <ul class="pagelist clearfix">
+            <li>当前第<em v-text="page"></em>页</li>
+            <li>共<span v-text="maxPage"></span>页</li>
+            <li class="left"><a href="javascript:;" v-bind:class="{'disabled':page===1}"
+                                v-on:click="page>1 && (page=page-1) && loadClass(filterType)"
+            >上一页</a></li>
+            <li class="right"><a href="javascript:;"
+                                 v-bind:class="{'disabled':maxPage<=page}"
+                                 v-on:click="maxPage>page && (page=page+1) && loadClass(filterType)"
+            >下一页</a></li>
+
+        </ul>
+        <div class="countpage clearfix">
+            <div class="goto">
+                去第
+                <input type="number" class="goto-num" />
+                页
+            </div>
+            <button class="confirm" v-on:click="gotoPage">确定</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    require.async('./main.js', function(app){
+        app.init();
+    });
+</script>

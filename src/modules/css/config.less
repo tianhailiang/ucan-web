@@ -1,0 +1,33 @@
+// 网页主色
+@color: #6a3906;
+
+// 标题颜色
+@titleColor: #a6a6a6;
+
+// 按钮形状
+.btn(@width, @height, @radius, @clr) {
+  width: @width;
+  height: @height;
+  border-radius: @radius;
+  border: 1px solid @clr;
+  font-size: @height - 14px;
+  line-height: @height;
+  color: @clr;
+  text-align: center;
+  display: block;
+  &:hover {
+    background: @clr;
+    color: #fff;
+  }
+}
+
+.flex () {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lo-home {
+  width: 1254px;
+  margin: 60px auto;
+}

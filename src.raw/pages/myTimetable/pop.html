@@ -1,0 +1,80 @@
+﻿
+		<div class="layui-form">
+			
+			<ul class="sc-add-box">
+                <li>
+                    <label>课程名称</label>
+					<div class="sc-add-par">
+						<input type="text" name="courseName" class="courseName_alert" maxlength="20" placeholder="请输入20字以内" autofocus/>
+					</div>
+                </li>
+                <li class="sc-subject">
+                    <label>选择科目</label>
+                    <div class="sc-add-par" id="courseOption_alert">
+	                    <select name="subject" lay-verify="">
+	                    	<!--<option data-id="" class="courseOption_alert"></option>-->
+	                    </select>     
+                    </div>
+                </li>
+                <li class="sc-type">
+                    <label>课程类型</label>
+                    <div class="sc-add-par" id="classType_alert">
+	                    <select name="type" lay-verify="">
+						  <option value="0" class="classType_alert">请选择课程类型</option>
+						  <option value="live">直播课(班课)</option>
+						  <option value="ooo">一对一</option>
+						</select>    
+                    </div>
+
+                </li>
+                <li>
+                    <label>人数</label>
+                    <div class="sc-add-par">
+                    	<input type="number" name="ccount" max="1" min="1" class="personNum_alert" placeholder="请输入人数(针对班课)"/>
+                    </div>
+                </li>
+                <!--<li>
+                    <label>课程简介</label>
+                    <div class="sc-add-par">
+                    	<textarea type="text" name="cdescription" class="courseAbout_alert" placeholder="请输入课程简介"></textarea>
+                    </div>
+                </li>-->
+                <li>
+                    <label>添加封面</label>
+                    <div class="sc-add-par">
+                    	<div class="addpic" id="fileList">
+                    		<img src="" id="courseImg" picFileId="1"/>
+                    	</div>
+                                            <!-- <div class="site-ucan-upload">
+				 <div class="site-ucan-upbar">
+					<input name="file" class="layui-upload-file" type="file" id="test">
+				</div>
+                    </div> -->
+                    <div id="upload" class="site-ucan-upload">
+                            <!-- <div class="site-ucan-upbar"> -->
+                                    <!-- <input name="file" class="layui-upload-file" type="file" id="test"> -->
+                                    <span class="layui-upload-icon"><i class="layui-icon"></i>上传图片</span>
+                            <!-- </div> -->
+                    </div>
+                </li>
+                <li>
+                    <label>教学计划</label>
+                    <div class="sc-add-par">
+                    	<!--<button class="btn addbtn sc-pi" type="button">批量添加课节</button>-->
+	                    <button class="btn addbtn sc-addone" type="button">修改课节</button>
+	                    <ul class="sc-plan">
+	                    </ul>
+                    </div>
+                </li>
+                <li>
+                	<label></label>
+                    <div class="sc-add-par">
+                    	<button class="btn subcourse uploadSave">提交修改</button>
+                    </div>
+                    
+                </li>
+            </ul>
+		
+		</div>
+        <script src="../../js/webuploader.js"></script>
+        <script src="pop.js"></script>

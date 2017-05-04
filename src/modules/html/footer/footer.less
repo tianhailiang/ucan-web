@@ -1,0 +1,96 @@
+@import url(/modules/css/config.less);
+
+footer {
+  border-top: 5px solid #ffe100;
+  background: #fff2b8;
+  .footer-bottom {
+    height: 75px;
+    background: @color;
+    text-align: center;
+    p {
+      padding: 10px 0 5px;
+    }
+    a {
+      color: #eee;
+    }
+    color: #eee;
+    span {
+      margin: 0 5px;
+    }
+  }
+
+  .m-ul {
+    padding: 40px 0;
+    width: 1254px;
+    margin: 0 auto;
+    .m-li {
+      width: 360px;
+      float: left;
+      position: relative;
+      padding-left: 100px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 73px;
+        height: 73px;
+        background: url(./bo.png) no-repeat;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    .about-li {
+
+    }
+
+    .course-set {
+      width: 250px;
+      padding-left: 150px;
+      &:before {
+        left: 40px;
+        background-position: -207px 0;
+      }
+    }
+
+    .contact {
+      width: 180px;
+      &:before {
+        background-position: -413px 0;
+      }
+    }
+  }
+
+  .course-set {
+    margin: 0 30px;
+    padding: 0 30px;
+    border-left: 1px solid @color;
+    border-right: 1px solid @color;
+    height: 263px;
+  }
+
+  .contact-item {
+    margin-top: 46px;
+    .flex();
+    margin-left: -100px;
+    a {
+      background: url(./bo.png) no-repeat;
+      display: block;
+    }
+    .qq {
+      width: 143px;
+      height: 35px;
+      background-position: -764px -7px;
+      margin-top: 8px;
+    }
+    .sina {
+      width: 54px;
+      height: 44px;
+      background-position: -960px 0;
+    }
+    .wx {
+      width: 57px;
+      height: 46px;
+      background-position: -1062px 0;
+    }
+  }
+}

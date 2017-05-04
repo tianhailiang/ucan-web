@@ -1,0 +1,170 @@
+/*样式重置*/
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr{margin:0;padding:0}
+body,button,input,select,textarea{ font:14px/1.5 "Microsoft YaHei",arial, verdana, sans-serif}
+body,html{min-width: 1254px;height: 100%;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+li{list-style:none}
+fieldset,img{border:0}
+table{border-collapse:collapse;border-spacing:0}
+q:before,q:after{content:”}
+button,input,select,textarea{font-size:100%}
+legend{color:#000}
+small{font-size:12px}
+hr{border:none;height:1px}
+a{text-decoration:none}
+a:hover{text-decoration:none}
+.cle:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.cle{ display:inline-block}
+.cle{ display:block}
+.clear {clear: both;}
+/*html5*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+/*样式重置*/
+/*自定义样式--------------------------------*/
+/*基本字体颜色*/
+/*所有白色字体：#ffffff*/
+.c-f{color: #fff;}
+/*所有黑色字体：#000000*/
+.c-b{color: #000;}
+/*所有灰色字体：#a0a0a0*/
+.c-y{color: #a0a0a0;}
+/*所有桔色字体：#ff7e00*/
+.c-o{color: #ff7e00}
+/*所有灰色线条：#dcdcdc*/
+.b-color{color: #dcdcdc}
+/*所有灰色色块：#eeeeee*/
+.bg-e{background-color:#eee;}
+/*黄色背景*/
+.bg-y{background: #ffe100;}
+/*自定义样式--------------------------------*/
+.w{width: 1254px;}
+.fl{float: left;}
+.fr{float: right;}
+.oh{overflow: hidden;}
+.c{margin: 0 auto;}
+
+/*崔杰*/
+
+.fn-c0{
+	color: #6a3906;
+}
+.fn-c1{
+	color: #fff2b8;
+}
+.fn-s0{
+	font-size: 16px;
+}
+.fn-s1{
+	font-size: 20px;
+}
+.fn-s2{
+	font-size: 12px;
+}
+.fn-s3{
+	font-size: 24px;
+}
+.fn-w6{
+	font-weight: 600;
+}
+.fn-w4{
+	font-weight: 400;
+}
+.bor-d {
+	border-bottom: 1px solid #ddd;
+}
+.bor-10 {
+	border-bottom: 1px solid #00b7ee;
+}
+.bor-11 {
+	border-bottom: 1px solid #ffe100;
+}
+.bor-12 {
+	border-bottom: 1px solid #f29c9f;
+}
+.bor-13 {
+	border-bottom: 1px solid #8fc31f;
+}
+.bor-14 {
+	border-bottom: 1px solid #ffe100;
+}
+.bor-15 {
+	border-bottom: 1px solid #00b7ee;
+}
+.bg-c0{
+	background-color: #ffe100;
+}
+.bg-c1{
+	background-color: #6a3906;
+}
+.bg-c2{
+	background-color: #fff2b8;
+}
+.bg-c3{
+	background-color: #ffe100;
+}
+.bg-c4{
+	background-color: #fff;
+}
+.bg-c5{
+	background-color: #f39800;
+}
+.bg-c6{
+	background-color: #c5f9ff;
+}
+.bg-c7{
+	background-color: #00a0e9;
+}
+.bg-c8{
+	background-color: #00b7ee;
+}
+.bg-c9{
+	background-color: #f29c9f;
+}
+.bg-c10{
+	background-color: #8fc31f;
+}
+img{
+	vertical-align: top;
+	display: inline-block;
+	border: none;
+}
+.text-ell{
+	display:block;
+	width: 330px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+/*崔杰*/
+
+
+
+
+
+/*韩月辉*/
+.mt3{margin-top: 3px;}
+.mt10{margin-top: 10px;}
+.mt35{margin-top: 45px;}
+.br-l{border-left: 1px solid #fff;}
+.br-r{border-right: 1px solid #fff;}
+.disnone{display: none;}
+.txt-l{text-align: left;}
+.texc{text-align: center;}
+.f-size13{font-size: 13px;line-height: 26px;}
+.f-size16{font-size: 16px;line-height: 32px;}
+.btn{outline: none;background: transparent;border: none;padding: 6px 15px;cursor: pointer;}
+.in-b{display: inline-block;}
+.w25{width: 25%;}
+.pos-r{position: relative;}
+.pos-a{position: absolute;}
+.icon-up{display: inline-block;width: 10px;height: 10px;background: url("../img/up_03.png") no-repeat bottom;margin-top: 3px;margin-left: 3px;}
+.red{color: red;}
+/*韩月辉*/
+
+
+
+
+/*************twmay*************/
+input:-webkit-autofill{
+	box-shadow:0 0 0 1000px #fff inset;
+}

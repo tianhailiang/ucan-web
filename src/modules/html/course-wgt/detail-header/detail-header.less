@@ -1,0 +1,296 @@
+.class-detail-layout {
+    margin: 25px auto;
+}
+
+.detail-header {
+    margin: 0 auto;
+    width: 1200px;
+    height: 380px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    padding: 38px;
+    .slider-box {
+        position: relative;
+        float: left;
+        width: 420px;
+        height: 300px;
+        background: #333;
+        .carousel-cotainer {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        img {
+            width: 420px;
+            height: 300px;
+        }
+        .carousel-misc {
+            .carousel-control-left {
+                position: absolute;
+                left: 0;
+                top: -175px;
+            }
+            .carousel-control-right {
+                position: absolute;
+                left: 395px;
+                top: -175px;
+            }
+        }
+    }
+    .slider-content {
+        float: left;
+        width: 672px;
+        height: 300px;
+        margin-left: 30px;
+        .detail-title {
+            font-size: 22px;
+            color: #6a3906;
+            height: 30px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .detail-info {
+            margin-top: 25px;
+            height: 55px;
+            line-height: 55px;
+            background-color: #fff2b8;
+            width: 100%;
+            .free {
+                font-size: 22px;
+                color: #80d610;
+                margin-left: 10px;
+            }
+            ul {
+                margin-top: 10px;
+                float: right;
+                li {
+                    float: right;
+                    height: 35px;
+                    line-height: 35px;
+                    border-right: 1px solid #dcdcdc;
+                    padding: 0 10px;
+                    &:first-child {
+                        i {
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-top: 9px;
+                            margin-right: 5px;
+                            width: 19px;
+                            height: 17px;
+                            background: url(./img/i-sc.png?__sprite) no-repeat;
+                        }
+                        border-right: 0;
+                    }
+                    .has-num {
+                        color: #eb6100;
+                        padding: 0 5px;
+                    }
+                    .total-num {
+                        padding: 0 5px;
+                    }
+                }
+            }
+        }
+        .class-info {
+            margin-top: 25px;
+            p {
+                height: 30px;
+                line-height: 30p;
+            }
+        }
+        .brand-info {
+            margin-top: 18px;
+            li {
+                width: 94px;
+                height: 20px;
+                display: inline-block;
+                margin-right: 8px;
+            }
+            .real-name {
+                background: url(./img/i-smrz.png?__sprite) no-repeat;
+            }
+            .quality {
+                background: url(./img/i-zgrz.png?__sprite) no-repeat;
+            }
+            .join-every-time {
+                background: url(./img/i-ssbm.png?__sprite) no-repeat;
+            }
+        }
+    }
+}
+
+.to-check-class {
+    margin-top: 18px;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    background-color: #6a3906;
+    color: #fff2b8;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+}
+
+.y-yuyue {
+    .ui-dialog-content {
+        padding: 0 45px !important;
+    }
+    .title {
+        height: 30px;
+        border-bottom: 1px solid #dcdcdc;
+        p {
+            font-size: 22px;
+            color: #a0a0a0;
+            width: 90px;
+            height: 30px;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 1px solid #ffe100;
+        }
+    }
+    .skan-all-container {
+        .select-li {
+            height: 45px;
+            line-height: 45px;
+            border-bottom: 1px dashed #dcdcdc;
+            width: 100%;
+            color: #000;
+            font-size: 16px;
+            span {
+                display: inline-block;
+                margin-left: 20px;
+                vertical-align: top;
+            }
+            .checkbox {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+            }
+            .class-index {
+                min-width: 50px;
+            }
+            .class-title {
+                width: 320px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .class-status {
+                float: right;
+                margin-right: 20px;
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+            &.has-select {
+                // 表示已结课
+                color: #dcdcdc;
+            }
+        }
+        .class-footer {
+            border-top: 1px solid #dcdcdc;
+            padding: 10px 0;
+            .select-all-label {
+                .select-all {
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                    margin-right: 25px;
+                }
+            }
+            .paginator {
+                float: right;
+                text-align: center;
+                font-size: 14px;
+                color: #a0a0a0;
+                .pagelist {
+                    display: inline-block;
+                    li {
+                        margin-right: 10px;
+                        float: left;
+                        cursor: pointer;
+                    }
+                }
+                .active {
+                    color: #eb6100;
+                }
+                .countpage {
+                    display: inline-block;
+                    vertical-align: top;
+                    div {
+                        float: left;
+                        margin-right: 10px;
+                    }
+                    .goto {
+                        input {
+                            width: 34px;
+                        }
+                    }
+                    button {
+                        width: 40px;
+                        color: #a0a0a0;
+                        cursor: pointer;
+                        outline: none;
+                        border: 1px solid #dcdcdc;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+        .to-check-class {
+            float: none;
+            margin-top: 25px;
+            margin-left: 280px;
+        }
+    }
+    .yuyue-all-container {
+        .class-select-ul {
+            font-size: 0;
+        }
+        .select-li {
+            height: 45px;
+            line-height: 45px;
+            border-bottom: 1px dashed #dcdcdc;
+            display: inline-block;
+            width: 315px;
+            color: #000;
+            font-size: 16px;
+            .select-radio {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                box-sizing: border-box;
+                border: 1px solid #000;
+                vertical-align: top;
+                margin-top: 15px;
+                cursor: pointer;
+            }
+            &.has-select {
+                // 表示不可预约
+                color: #dcdcdc;
+                .select-radio {
+                    border: 1px solid #dcdcdc;
+                }
+            }
+            &.selected {
+                // 表示选中
+                color: #eb6100;
+                .select-radio {
+                    border: 1px solid #dcdcdc;
+                    background: #eb6100;
+                }
+            }
+        }
+        .to-check-class {
+            float: none;
+            margin-top: 25px;
+            margin-left: 215px;
+        }
+    }
+}

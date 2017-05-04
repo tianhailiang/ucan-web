@@ -1,0 +1,78 @@
+<div class="class-evaluate" id="class-evaluate">
+    <h2 class="title-bar">
+        <span>课程评价</span>
+    </h2>
+    <ul class="evaluate-content">
+        <span class="off-e" style="text-align: center;" v-show="rows.length==0">暂无评价</span>
+        <li class="clearfix" v-for="(item, index) in rows">
+            <div class="evaluate-logo" v-bind:style="'background-image: url(' + item.students.ucanFile + ')'"></div>
+            <div class="evaluate-detail">
+                <div class="evaluate-level" data-level='5'>
+                    <span class="flower-gray"></span>
+                    <span class="flower-color" v-bind:class="'len-' + item.evaluationFraction"></span>
+                </div>
+                <p v-text="item.evaluation"></p>
+                <span class="evaluate-time" v-text="item.createdAt"></span>
+            </div>
+        </li>
+    </ul>
+    <!--<div class="paginator">
+        <ul class="pagelist clearfix">
+            <li class="left">上一页</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="right">下一页</li>
+        </ul>
+        <div class="countpage clearfix">
+            <div class="pagenumber">
+                共<span>100</span>页
+            </div>
+            <div class="goto">
+                去第
+                <input type="text">
+                页           
+            </div>
+            <button class="confirm">确定</button>
+        </div>
+    </div>-->
+    
+    <div v-show="rows.length!==0" class="paginator">
+        <ul class="pagelist clearfix">
+            <li>当前第<em v-text="page"></em>页</li>
+            <li>共<span><em v-text="maxPage"></em></span>页</li>
+            <li class="left"><a href="#" v-bind:class="{'disabled':page===1}"
+                                v-on:click="page>1 && (page=page-1) && loadData()"
+            >上一页</a></li>
+            <li class="right"><a href="#"
+                                 v-bind:class="{'disabled':maxPage<=page}"
+                                 v-on:click="maxPage>page && (page=page+1) && loadData()"
+            >下一页</a></li>
+
+        </ul>
+        <div class="countpage clearfix">
+            <div class="goto">
+                去第
+                <input type="number" class="goto-num" />
+                页
+            </div>
+            <button class="confirm" v-on:click="gotoPage">确定</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    require.async('./appraise.js', function(evaluate){
+        evaluate.init();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+

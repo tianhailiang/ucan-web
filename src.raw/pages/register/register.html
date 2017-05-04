@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>注册 - 优看 uCan</title>
+    <link rel="shortcut icon" href="../../img/ucan.ico">
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="../../css/header.css" />
+		<link rel="stylesheet" href="../../css/footer.css" />
+		
+	</head>
+
+	<body>
+			<header class="cf">
+			<a class="logo" href="../../index.html"><img src="../../img/logo.png" /></a>
+			<nav>
+				<div class="search">
+					<select>
+						<option value="0">搜教师</option>
+						<option value="1">搜课程</option>
+					</select>
+					<input type="text" name="" id="">
+					<a class="b"></a>
+				</div>
+				<ul>
+					<li>
+						<a class="nav-index" href="../../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../../classroom.html">直播课堂</a>
+					</li>
+					<li>
+						<a href="../teacherList/teacherList.html">名师国际</a>
+					</li>
+					<li>
+						<a href="../courseList/courseList.html">一对一家教</a>
+					</li>
+					<!--            <li><a href="#">微校</a></li>-->
+					<li>
+						<a class="nav-quxue" href="../../quxue.html">趣学英语</a>
+					</li>
+					<!--            <li><a href="#">智力游戏</a></li>-->
+					<li>
+						<a class="nav-about" href="../../about.html">关于优看</a>
+					</li>
+					<!--            <li><a href="#">下载APP</a></li>-->
+				</ul>
+			</nav>
+		</header>
+		
+		<form id="register">
+			<div id="tip"></div>
+			<div class="content">
+			<label>邮箱</label>
+			<input type="text" class="usermessage emailValid" name="email" placeholder="请输入邮箱" autofocus><span></span>
+			<label>密码</label>
+			<input type="password" class="usermessage pwd" name="pswd" placeholder="请输入密码"><span></span>
+			<label>确认密码</label>
+			<input type="password" class="usermessage rpwd" name="rpswd" placeholder="请确认密码"><span></span>
+			</div>
+			<div id="read">
+				<input type="checkbox" name="accept" id="accept" checked="checked"/>我已阅读并接受
+				<a href="copyRight.html" class="f_b">版权声明</a>和
+				<a href="privacy.html" class="f_b">隐私保护</a>条款
+			</div>
+			<input type="button" name="register_button" id="register_button" value="马上注册" />
+		</form>
+				<div class="footer-bottom">
+			<p>
+				<a href="../../index.html">首页</a> <span>|</span>
+				<a href="../../about.html">关于优看</a> <span>|</span>
+				<a href="../register/register.html">免费注册</a>
+				<br> ©2016 优看网络 版权所有</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/register.js"></script>
+
+</html>

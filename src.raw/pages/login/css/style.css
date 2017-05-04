@@ -1,0 +1,183 @@
+
+body,html{min-width: 1254px;}
+header.cf{
+	border-bottom: 2px solid #6a3906;
+}
+a{
+	color:black;
+}
+.tip{
+	border:1px solid red !important;
+}
+.f_b{
+	color:#3d88f4;
+	font-size:16px;
+}
+.active{
+	border-bottom: 1px solid #ffe100;
+}
+.noactive{
+	border-bottom: 1px solid #dcdcdc;
+}
+.disnone{
+	display: none;
+}
+
+#login{
+	width:420px;
+	height:420px;
+	position: relative;
+	margin:100px auto;
+}
+/**
+ * 安全登录content
+ */
+#safe_login_content{
+	position: absolute;
+	top:40px;
+	margin-top:20px;
+}
+#safe_login_content img{
+	margin:20px 70px;
+}
+#safe_login_content p{
+	width:420px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 35px;
+}
+#safe_login_content p span{
+	width:auto;
+}
+/**
+ * 安全登录content
+ */
+
+
+
+
+/**
+ * 账户登录content
+ */
+#user_login_content{
+	position: absolute;
+	top:60px;
+	margin-top:20px;
+	width:570px;
+}
+#user_login_content label{
+	text-align: center;
+	margin:10px;
+	width:70px;
+}
+#user_login_content span{
+	display: inline-block;
+	color:red;
+	width:150px;
+}
+.usermessage{
+	margin:15px 10px;
+	width:325px;
+	border-radius: 20px;
+	border:1px solid #6a3906;
+	outline:medium;
+	-webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none;
+	height:35px;
+	padding:0 10px;
+}
+span.header_span{
+	display: inline-block;
+	width:210px;
+	float: left;
+	text-align: center;
+	color: #a0a0a0;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 40px;
+	height: 40px;
+	margin: 0;
+}
+#auto_login{
+	border:1px solid #6a3906;
+	width:10px;
+	height:10px;
+	color:#6a3906;
+	border-radius: 20px;
+	margin: 10px;
+	
+}
+#auto_login_content{
+	width:420px;
+	text-align: center;
+	margin: 10px;
+	font-size: 16px;
+}
+#auto_login_content font{
+	
+	margin: 10px;
+}
+font{
+	color:#a0a0a0;
+	font-size: 14px;
+}
+#login_button{
+	display: inline-block;
+	text-indent: 0.5em;
+	width:130px;
+	height:35px;
+	background-color: #ffe100;
+	border:1px solid #ffe100;
+	border-radius: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #6a3906;
+	letter-spacing: 10px;
+	outline:medium;
+	cursor: pointer;
+}
+#login_button:hover{
+	background-color: #ff7e00;
+}
+#login_re{
+	width:420px;
+	text-align: center;
+}
+#login_re p{
+	display: inline-block;
+
+	text-align: center;
+	margin: 20px;
+	font-size: 16px;
+}
+.other_login{
+	text-align: center;
+	line-height: 25px;
+	font-size: 14px;
+	display: inline-block;
+	border-radius: 8px;
+	width:95px;
+	height:25px;
+	color:white;
+	margin:25px 5px;
+}
+#other_login{
+	width:100%;
+	text-align: center;
+}
+.other_login img{
+	height:21px;
+	margin:2px;
+	
+}
+span#user_login{
+	width:100%;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 15px;
+}
+/**
+ * 账户登录content
+ */
+
+
+

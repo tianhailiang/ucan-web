@@ -1,0 +1,206 @@
+.box-1on1 {
+  width: 1156px;
+  .title-bar span {
+    border-color: #8fc31f;
+  }
+  position: relative;
+  margin-top: 30px;
+  padding: 30px 40px;
+  border: 1px solid #dcdcdc;
+  .header-1on1 {
+    .tl-btn-container {
+      position: absolute;
+      right: 40px;
+      top: 30px;
+      box-sizing: border-box;
+      height: 35px;
+      .tl-btn {
+        float: right;
+        position: relative;
+        top: -5px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #DCDCDC;
+      }
+      .tl-backward {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        .tl-left-arrow {
+          display: inline-block;
+          position: relative;
+          left: 12px;
+          top: 6px;
+          width: 15px;
+          height: 15px;
+          border-left: 1px solid;
+          border-bottom: 1px solid;
+          border-color: #8B8B8B;
+          transform: rotate(45deg);
+        }
+      }
+      .tl-forward {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        .tl-right-arrow {
+          display: inline-block;
+          position: relative;
+          left: 1px;
+          top: 6px;
+          width: 15px;
+          height: 15px;
+          border-right: 1px solid;
+          border-bottom: 1px solid;
+          border-color: #8B8B8B;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .cul {
+    border: 1px solid #dcdcdc;
+    background: #eee;
+    height: 28px;
+    line-height: 28px;
+    li {
+      float: left;
+      padding: 0 10px;
+    }
+    a {
+      color: #000;
+    }
+    .cur {
+      color: #eb6100;
+    }
+  }
+
+  .course-type {
+    margin: 30px 0;
+  }
+
+  .main-sort-type {
+    float: left;
+  }
+
+  .sort-type-plus {
+    float: right;
+    li {
+      padding: 0 10px 0 24px;
+      position: relative;
+      span {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        left: 0;
+        top: 7px;
+      }
+    }
+  }
+
+  .course-content {
+    img{
+        display: none;
+    }
+    ul {
+      //display: -webkit-flex;
+      //display: flex;
+      //justify-content: space-between;
+      //flex-wrap: wrap;
+      li {
+        float: left;
+        width: 289px;
+        box-sizing: border-box;
+        .course-box{
+          width: 254px;
+          margin: 0 auto;
+        }
+      }
+    }
+    a {
+      display: inline;
+      width: 254px;
+      p{
+        width: 254px;
+        margin: 10px 0;
+        word-break: break-word;
+        font-weight: 600;
+        color: #000;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        .cOoo{
+            width: auto;
+            padding: 0px 7px;
+            border-radius: 5px;
+            color: #6A3906;
+            margin-right: 5px;
+            display: inline-block;
+            background-color: #ffe100;
+            float: left;
+        }
+      }
+      span {
+        display: block;
+        width: 254px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        &.img {
+          height: 166px;
+          border: 1px solid #ccc;
+          background: #efefef;
+          background-size: 100% 100%;
+        }
+      }
+      .img{
+        margin: 0 auto;
+        position: relative;
+        span{
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            line-height: 25px;
+            position: absolute;
+            left: 0;
+            width: 216px;
+            padding-left: 38px;
+            height: 25px;
+            bottom: 0;
+            z-index: 10;
+            i{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 15px;
+                line-height: 15px;
+                padding: 5px;
+                font-style: normal;
+            }
+        }
+      }
+    }
+      .join-num {
+        font-size: 12px;
+        color: #a0a0a0;
+        margin: 0 auto;
+      }
+      .fee {
+        width: 254px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #ff7e00;
+        display: block;
+      }
+      .free {
+        width: 254px;
+        margin: 0 auto;
+        display: block;
+        color: #80d610;
+      }
+  }
+}

@@ -1,0 +1,251 @@
+@import url(/modules/css/config.less);
+
+header {
+  height: 70px;
+  position: relative;
+  padding: 15px 30px;
+
+  .logo {
+    float: left;
+  }
+
+  aside {
+    float: right;
+    padding-top: 5px;
+  }
+
+  .no-login {
+    a {
+      display: block;
+      .btn(90px, 26px, 6px, @color);
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .is-login {
+    .head-photo {
+      float: left;
+      width: 63px;
+      height: 63px;
+      border: 1px solid #8E6A46;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+    .user-box {
+      float: left;
+      width: 70px;
+      height: 65px;
+
+      .user-name {
+        font-size: 14px;
+        margin-bottom: 7px;
+        padding-left: 2px;
+        text-align: left;
+        color: #B3B3B3;
+      }
+      .user-info-box {
+        height: 32px;
+        border: 1px solid #8E6A46;
+        border-radius: 6px;
+
+        .a {
+          float: left;
+          width: 34px;
+          height: 32px;
+          img {
+            height: 20px;
+            width: 20px;
+            position: relative;
+            top: 5px;
+            left: 8px;
+          }
+        }
+
+        .user-notice-btn {
+          //如果需要按钮hover变色则根据下列样式修改
+          //border-top-left-radius:6px;
+          //border-bottom-left-radius:6px;
+          // <img src="/widget/header/img/letter.png" alt="home"/>
+          background: url(./img/letter.png) no-repeat 50% 50%;
+          background-size: 23px 23px;
+        }
+
+        .user-drop-down-btn {
+          //border-top-right-radius:6px;
+          //border-bottom-right-radius:6px;
+          box-shadow: inset 1px 0 0 #8E6A46;
+        }
+
+        .ico-profile {
+          background: url(./img/profile.png) no-repeat 50% 50%;
+          background-size: 20px 20px;
+          display: block;
+          width: 34px;
+          height: 32px;
+        }
+
+        .user-drop-down {
+          position: absolute;
+          display: none;
+          z-index: 99;
+          right: 25px;
+          top: 100px;
+          width: 150px;
+          height: 210px;
+          .shadow-arrow {
+            z-index: 100;
+            position: absolute;
+            top: -5px;
+            right: 17px;
+            transform: rotate(45deg);
+            box-shadow: 2px -1px 5px #AAA;
+            height: 10px;
+            width: 10px;
+          }
+          .little-arrow {
+            z-index: 400;
+            background: #fff;
+            position: absolute;
+            top: -5px;
+            right: 17px;
+            transform: rotate(45deg);
+            height: 10px;
+            width: 10px;
+          }
+          .true-list {
+            position: relative;
+            z-index: 300;
+            background-color: #fff;
+            width: 150px;
+            height: 216px;
+            border-radius: 5px;
+            -moz-box-shadow: 2px 2px 5px #333;
+            -webkit-box-shadow: 2px 2px 5px #333;
+            box-shadow: 2px 2px 5px #333;
+
+            li:first-child {
+              line-height: 35px;
+              border-bottom: solid 1px #B6B6B6;
+            }
+            li:last-child {
+              line-height: 35px;
+              border-top: solid 1px #B6B6B6;
+            }
+            li {
+              &:hover {
+                opacity: 0.8;
+              }
+              position: relative;
+              padding-left: 58px;
+              padding-top: 2px;
+              padding-bottom: 2px;
+              color: rgba(0, 0, 0, 0.4);
+              line-height: 30px;
+              cursor: pointer;
+              img {
+                height: 16px;
+                width: 16px;
+                position: relative;
+                left: 0;
+                top: 3px;
+                margin-right: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  nav {
+    margin-right: 30px;
+    padding-top: 5px;
+    float: right;
+    .search {
+      float: right;
+      clear: both;
+      position: relative;
+      input {
+        padding: 0 30px 0 10px;
+        border: 1px solid @color;
+        height: 24px;
+        border-radius: 12px;
+        display: block;
+      }
+      .b {
+        position: absolute;
+        background: url(./img/top.png) no-repeat 2px 5px;
+        width: 24px;
+        height: 24px;
+        border: none;
+        right: 5px;
+        top: 0;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      clear: both;
+      padding-top: 16px;
+      li {
+        float: left;
+        margin: 0 3px;
+        a {
+          display: block;
+          padding: 0 12px;
+          height: 25px;
+          line-height: 25px;
+          white-space: nowrap;
+          color: @color;
+          border-radius: 4px;
+          &.current, &:hover {
+            color: #fff;
+            background: @color;
+          }
+        }
+      }
+    }
+  }
+
+  .ico-img {
+    display: block;
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .ico-home {
+    background: url(./img/room.png);
+    background-size: cover;
+  }
+  .ico-class-m {
+    background: url(./img/class-manage.png);
+    background-size: cover;
+  }
+  .ico-trade-m {
+    background: url(./img/trade-manage.png);
+    background-size: cover;
+  }
+
+  .ico-dollar {
+    background: url(./img/dollar.png);
+    background-size: cover;
+  }
+
+
+  .ico-setup {
+    background: url(./img/setup.png);
+    background-size: cover;
+  }
+
+  .ico-go-away {
+    background: url(./img/go-away.png);
+    background-size: cover;
+  }
+}

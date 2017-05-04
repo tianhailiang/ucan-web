@@ -1,0 +1,97 @@
+<header class="cf">
+    <a class="logo" href="#"><img src="/modules/html/header/img/logo.png"/></a>
+
+    <!--未登录状态-->
+    <aside class="not-login" style="display: none">
+        <ul>
+            <li><a href="pages/register/register.html">免费注册</a></li>
+            <li><a href="pages/login/login.html">学生登录</a></li>
+        </ul>
+    </aside>
+
+    <!--已登录状态-->
+    <aside class="is-login">
+        <div class="head-photo">
+            <img src="" alt="">
+        </div>
+        <div class="user-box">
+            <p class="user-name">张三</p>
+            <div class="user-info-box">
+                <a href="#" class="a user-notice-btn"></a>
+                <div class="a user-drop-down-btn" id="user-drop-down-btn">
+                    <!--<img src="/widget/header/img/profile.png" alt="home"/>-->
+                    <span class="ico-profile"></span>
+                    <div class="user-drop-down" id="user-drop-down">
+                        <div class="little-arrow"></div>
+                        <div class="shadow-arrow"></div>
+                        <ul class="true-list">
+                            <li>
+                                <a href="pages/myTimetable/myTimetable.html">
+                                    <span class="ico-img ico-home"></span>
+                                    我的主页
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="ico-img ico-class-m"></span>
+                                    课程管理
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="ico-img ico-trade-m"></span>
+                                    交易管理
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="ico-img ico-dollar"></span>
+                                    账户充值
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/personalInfo/personalInfo.html">
+                                    <span class="ico-img ico-setup"></span>
+                                    个人设置
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="ico-img ico-go-away"></span>
+                                    退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <nav>
+        <div class="search">
+            <input type="text" name="" id="">
+            <button class="b"></button>
+        </div>
+        <ul id="main-nav">
+            <li><a class="nav-index" href="./index.html">首页</a></li>
+            <li><a href="./classroom.html">直播课堂</a></li>
+            <li><a href="#">课程</a></li>
+            <li><a href="#">家教</a></li>
+            <li><a href="#">微校</a></li>
+            <li><a class="nav-quxue" href="quxue.html">趣学英语</a></li>
+            <li><a href="#">智力游戏</a></li>
+            <li><a class="nav-about" href="about.html">关于优看</a></li>
+            <li><a href="#">下载APP</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    require.async('./header.js', function(app){
+        app.init();
+
+       
+    });
+</script>
+

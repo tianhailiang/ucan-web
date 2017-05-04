@@ -1,0 +1,97 @@
+.s-comment{
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+	border-bottom: 2px solid #fff;
+}
+.comment-l{
+	width: 150px;
+	margin-right: 40px;
+}
+.comment-l p{
+	text-align: center;
+	line-height: 46px;
+	font-weight: 600;
+}
+.comment-r{
+	width: 780px;	
+}
+.comment-r p{
+	margin: 15px 0;
+}
+
+
+
+/*弹出框*/
+.popup-fix{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 700px;
+	height: 500px;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+}
+.popup-fix .c-off{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+}
+.p-center{
+	margin: 40px;
+}
+.c-title-l{
+	width: 250px;
+	height: 150px;
+	margin-right: 40px;
+}
+.c-title-r{
+	width: 330px;
+}
+.teach-name{
+	margin: 15px 0;
+}
+.teach-time{
+	margin: 10px 0;
+}
+.teach-time p{
+	margin: 5px 0;
+}
+.c-renzheng img{
+	width: 90px;
+}
+.course-title{
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+.c-fol{
+	line-height: 20px;
+}
+.text-area{
+	width: 100%;
+	margin: 20px 0;
+	padding: 10px;
+	box-sizing: border-box;
+	resize: none;
+}
+.c-form{
+	position: absolute;
+	bottom: 15px;
+	right: 40px;
+	height: 26px;
+}
+.c-form a{
+	display: inline-block;
+	width: 100px;
+	height: 26px;
+	border: 1px solid #6a3906;
+	color: #bea776;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 26px;
+	margin-left: 20px;
+}

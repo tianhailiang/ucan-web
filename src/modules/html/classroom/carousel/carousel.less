@@ -1,0 +1,66 @@
+.class-carousel {
+  height: 190px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .carousel-wp {
+    left: 50%;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    margin-left: -50%;
+    position: absolute;
+  }
+
+  .carousel-wp ul {
+    width: 999999px;
+    height: 190px;
+    position: relative;
+  }
+
+  .carousel-wp li {
+    background: rgb(204, 204, 204);
+    width: 100%;
+    height: 190px;
+    text-align: center;
+    font-size: 0;
+    float: left;
+    display: inline;
+  }
+
+  .carousel-list {
+    left: 50%;
+    top: 160px;
+    width: 500px;
+    height: 30px;
+    margin-left: -75px;
+    position: absolute;
+  }
+
+  .carousel-list li {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+    display: inline;
+  }
+
+  .carousel-list a {
+    background: rgba(0, 0, 0, 0.3);
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 700;
+    float: left;
+    display: inline-block;
+  }
+
+  .carousel-list li.active a {
+    background: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+}

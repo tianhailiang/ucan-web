@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=EmulateIE10"/>
+		<title>课程直播 - 优看 uCan</title>
+    <link rel="shortcut icon" href="../../img/ucan.ico">
+		<link rel="stylesheet" href="../../css/border.css">
+		<link rel="stylesheet" href="../../css/laypage.css">
+		<link rel="stylesheet" href="../../css/base.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--互动版块-->
+		<link rel="stylesheet" type="text/css" href="css/canvas.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/shape.js"></script>
+		<script type="text/javascript" src="js/T_draw.js"></script>
+		<!--互动版块-->
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="top">
+				<img src="../../img/logo-s.png" height="100%" alt="">
+			</div>
+			<div class="main oh">
+				<div class="videoContent fl">
+					<!--互动版块-->
+					<div class="box">
+						<ul class="menu">
+							<li>画图</li>
+							<li>橡皮擦</li>
+							<input type="button" value="上一页" id="btn_prev" onclick="prev();"></input>
+							<input type="button" value="下一页" id="btn_next" onclick="next();"></input>
+						</ul>
+						<div class="body">
+							<div class="canvas">
+
+								<canvas id="canvas3"></canvas>
+								<canvas id="canvas2"></canvas>
+								<canvas class="canvasend" id="canvas1"></canvas>
+
+								<!--<canvas class="canvasend" id="canvas4" width="900" height="900"></canvas>-->
+								<div class="copy"></div>
+								<div class="xp"></div>
+							</div>
+							<div class="tool">
+								<ul class="option op-active">
+									<li data-role="line" style="display: none;">直线</li>
+									<li data-role="pen" class="my_none"><span class="pen" id="pen"></span></li>
+									<li data-role="arc" style="display: none;">圆</li>
+									<li data-role="rect" style="display: none;">矩形</li>
+									<li class="my_none"><span class="eraser"></span></li>
+									<li class="my_none"><span class="baiban"></span></li>
+									<li class="my_none"><span class="my_line"></span></li>
+									<li class="my_none"><span class="enlarge"></span></li>
+									<li class="my_none"><span class="my_line"></span></li>
+									<li class="my_btn"><span class="my_button my_button_left"></span></li>
+								</ul>
+								<ul class="option">
+									<li>
+										<input type="number" value="10" placeholder="请输入大小">
+									</li>
+								</ul>
+							</div>
+							<span id="perv_btn">上一页</span>
+							<span id="next_btn">下一页</span>
+						</div>
+					</div>
+					<!--互动版块-->
+
+				</div>
+				<div class="stu-comment bg-c2 fl">
+					<div class="tableBox bg-c6">
+						<div class="comm-i comm-i2 fn-s0 bg-c7">
+							<a class="c-f" href="javascript:;">
+								<span class="triangle-right"></span>学生列表
+							</a>
+						</div>
+						<div class="tebleboxCnt">
+							<p class="currentTime c-y fn-s2" style="text-align:center;line-height:30px;"></p>
+							<div class="stu-talk stu-talk2">
+								
+							<!--<span class="talk-user">sdasdfasfasf</span>-->
+						</div>
+						</div>
+					</div>
+					<div class="tableBox active">
+						<div class="comm-i fn-s0 bg-c5">
+							<a class="c-f" href="javascript:;">
+								<span class="triangle-right"></span> 我的课件
+							</a>
+						</div>
+						<div class="tebleboxCnt">
+							<div class="stu-talk">
+							<ul class="coursewareBox">
+								<li class="coursewareList active" style="display:none">
+									<div class="coursewarePic">
+										<img src="../../img/course-bg_03.png" class="coursewarePic_pic" />
+									</div>
+									<p class="coursewareSize">白板</p>
+								</li>
+							</ul>
+						</div>
+						<!--课件管理-->
+						<div id="coursewareManage">
+							<a class="coursewareManage btn">课件管理</a>
+						</div>
+						<!--课件管理-->
+						</div>
+					</div>
+					<div class="stu-out bg-c5" id="closeClassRoom">
+						<a class="c-f fn-s0" href="javascript:;">
+							退出
+						</a>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div id="alertcoursewareBox">
+			<div class="alertcourBox-bg">
+				<span id="closeBtn"></span>
+				<h2 class="texc alertcourBox-title">选择课件</h2>
+				<ul class="alertcourBox" id="alertcourBox">
+				</ul>
+			</div>
+		</div>
+		<div id="loadingBg">
+			<img src="../../img/loading.gif" id="loading_img"/>
+		</div>
+	</body>
+	<script src="../../js/jquery-1.8.3.min.js"></script>
+	<!--<script src="../../js/public.js"></script>-->
+	<script>
+		//		显示隐藏切换
+		$(".comm-i").click(function() {
+			var $this = $(this)
+			$this.parent(".tableBox").addClass("active");
+			$this.parent(".tableBox").siblings(".tableBox").removeClass("active");
+		})
+			//设置右边的高度
+		$(".stu-comment").css("height", $(".videoContent").height())
+		$(".stu-talk").css("height", ($(".videoContent").height() - 80))
+		$(".stu-talk2").css("height", ($(".videoContent").height()))
+		$(".coursewareBox").css("height", ($(".videoContent").height() - 80))
+	</script>
+
+</html>
+<script type="text/javascript">
+	var canvas3 = document.getElementById("canvas3");
+	var ctx3 = canvas3.getContext("2d");
+	var canvas1 = document.getElementById("canvas1");
+	var ctx = canvas1.getContext("2d");
+	var canvas2 = document.getElementById("canvas2");
+	var ctx2 = canvas2.getContext("2d");
+	var btn_prev = document.getElementById("btn_prev");
+	var btn_next = document.getElementById("btn_next");
+	//	var webSocket = new WebSocket("ws://192.168.3.2:9999");
+
+	var cw = $(".canvas").width();
+	var ch = $(".canvas").height();
+	var activePic = $(".coursewareList.active").find(".coursewarePic_pic").attr("src")
+	var img = new Image();
+	canvas3.width = canvas2.width = canvas1.width = cw;
+	canvas3.height = canvas2.height = canvas1.height = ch;
+	img.src = activePic;
+	img.onload = function() {
+			ctx3.drawImage(img, 0, 0, cw, ch);
+		}
+		//	点击切换课件图片
+	$(".coursewareBox").on("click", function(ev) {
+		if(ev.target.className == "coursewarePic_pic") {
+			var _this = ev.target;
+			var $this = $(_this);
+			$(_this.parentNode.parentNode).addClass('active').siblings().removeClass("active");
+			next($this);
+		}
+	})
+
+	function next(_this) {
+		ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
+		ctx.clearRect(0, 0, canvas3.width, canvas3.height);
+		ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+		cw = $(".canvas").width();
+		ch = $(".canvas").height();
+		img.src = _this.attr('src');
+		img.onload = function() {
+			ctx3.drawImage(img, 0, 0, cw, ch);
+		}
+		var srcT = _this.attr('src');
+		//		webSocket.send("Teacher,next," + srcT + "");
+	}
+
+</script>

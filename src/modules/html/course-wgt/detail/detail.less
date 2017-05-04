@@ -1,0 +1,374 @@
+@import url(./modal.less);
+
+.class-detail-layout {
+  margin: 25px auto;
+}
+
+.detail-header {
+  margin: 0 auto;
+  width: 1200px;
+  height: 380px;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  padding: 38px;
+  .slider-box {
+    position: relative;
+    float: left;
+    width: 420px;
+    height: 300px;
+    .carousel-cotainer {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+    img {
+      width: 420px;
+      height: 300px;
+    }
+    .carousel-misc {
+      .carousel-control-left {
+        position: absolute;
+        left: 0;
+        top: -175px;
+      }
+      .carousel-control-right {
+        position: absolute;
+        left: 395px;
+        top: -175px;
+      }
+    }
+  }
+  .slider-content {
+    float: left;
+    width: 672px;
+    height: 300px;
+    margin-left: 30px;
+    a{
+      margin: 20px 0 0 20px;
+    }
+    .detail-title {
+      font-size: 22px;
+      color: #6a3906;
+      height: 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .detail-info {
+      margin-top: 25px;
+      height: 55px;
+      line-height: 55px;
+      background-color: #fff2b8;
+      width: 100%;
+      .fee {
+        font-size: 22px;
+        color: #eb6100;
+        margin-left: 10px;
+      }
+      .free {
+        color: #80d610 !important;
+      }
+      ul {
+        margin-top: 10px;
+        float: right;
+        .collectS{
+            display: none;
+        }
+        li {
+          float: right;
+          height: 35px;
+          line-height: 35px;
+          border-right: 1px solid #dcdcdc;
+          padding: 0 10px;
+          &:first-child {
+            i {
+              display: inline-block;
+              vertical-align: top;
+              margin-top: 9px;
+              margin-right: 5px;
+              width: 19px;
+              height: 17px;
+              background: url(./img/i-sc.png?__sprite) no-repeat;
+            }
+            border-right: 0;
+          }
+          .has-num {
+            color: #eb6100;
+            padding: 0 5px;
+          }
+          .total-num {
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+    .class-info {
+      margin-top: 25px;
+      p {
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+    .brand-info {
+      margin-top: 18px;
+      li {
+        width: 94px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 8px;
+      }
+      .real-name {
+        background: url(./img/i-smrz.png?__sprite) no-repeat;
+      }
+      .quality {
+        background: url(./img/i-zgrz.png?__sprite) no-repeat;
+      }
+      .join-every-time {
+        background: url(./img/i-ssbm.png?__sprite) no-repeat;
+      }
+    }
+  }
+}
+
+.to-check-class {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  background-color: #6a3906;
+  color: #fff2b8;
+  font-size: 22px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+}
+
+.class-modal-content {
+  .ui-dialog-content {
+    padding: 0 45px !important;
+  }
+  .modal-title {
+    margin-top: 30px;
+    height: 30px;
+    border-bottom: 1px solid #dcdcdc;
+    p {
+      font-size: 22px;
+      color: #a0a0a0;
+      width: 90px;
+      height: 30px;
+      margin: 0 auto;
+      text-align: center;
+      border-bottom: 1px solid #ffe100;
+    }
+  }
+  .scan-all-container {
+    padding: 10px 40px;
+    .class-select-ul {
+      height: 410px;
+      overflow-y: scroll;
+    }
+    .class-select-uls {
+      height: 470px;
+      overflow-y: scroll;
+    }
+    .select-li {
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px dashed #dcdcdc;
+      width: 100%;
+      color: #000;
+      font-size: 16px;
+      span {
+        display: inline-block;
+        margin-left: 5px;
+        vertical-align: top;
+      }
+      .checkbox {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 13px 0;
+        cursor: pointer;
+      }
+      .class-index {
+        min-width: 50px;
+      }
+      .class-indexs{
+        display: inline-block;
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        padding: 0 12px;
+        border-radius: 5px;
+        background-color: #ffe100;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+      }
+      .class-title {
+        width: 320px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        em{
+          font-size: 14px;
+          color: #a0a0a0;
+          margin-left: 10px;
+        }
+      }
+      .class-time {
+        font-size: 14px;
+      }
+      .class-status {
+        float: right;
+        margin-right: 20px;
+        font-size: 14px;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      &.has-select {
+        // 表示已结课
+        color: #dcdcdc;
+      }
+    }
+    .class-footer {
+      border-top: 1px solid #dcdcdc;
+      padding: 10px 0;
+      .select-all-label {
+        .select-all {
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+          margin-right: 25px;
+        }
+      }
+      .paginator {
+        float: right;
+        text-align: center;
+        font-size: 14px;
+        color: #a0a0a0;
+        .pagelist {
+          display: inline-block;
+          li {
+            margin-right: 10px;
+            float: left;
+            cursor: pointer;
+          }
+        }
+        .active {
+          color: #eb6100;
+        }
+        .countpage {
+          display: inline-block;
+          vertical-align: top;
+          div {
+            float: left;
+            margin-right: 10px;
+          }
+          .goto {
+            input {
+              width: 34px;
+            }
+          }
+          button {
+            width: 40px;
+            color: #a0a0a0;
+            cursor: pointer;
+            outline: none;
+            border: 1px solid #dcdcdc;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .to-check-class {
+      float: none;
+      margin-left: 280px;
+    }
+  }
+
+  .yuyue-all-container {
+    .select-li {
+      height: 45px;
+      line-height: 45px;
+      border-bottom: 1px dashed #dcdcdc;
+      display: inline-block;
+      width: 315px;
+      color: #000;
+      font-size: 16px;
+      .select-radio {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        vertical-align: top;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+      &.has-select {
+        // 表示不可预约
+        color: #dcdcdc;
+        .select-radio {
+          border: 1px solid #dcdcdc;
+        }
+      }
+      &.selected {
+        // 表示选中
+        color: #eb6100;
+        .select-radio {
+          border: 1px solid #dcdcdc;
+          background: #eb6100;
+        }
+      }
+    }
+    .to-check-class {
+      float: none;
+      margin-top: 25px;
+      margin-left: 215px;
+    }
+  }
+}
+
+.class-intro {
+  margin: 0 auto;
+  margin-top: 45px;
+  width: 1200px;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  padding: 38px;
+  .class-title {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #dcdcdc;
+    .title-inner {
+      height: 40px;
+      width: 100px;
+      border-bottom: 1px solid #ffe100;
+      font-size: 24px;
+      color: #a0a0a0;
+    }
+  }
+  .class-detail {
+    color: #a0a0a0;
+    padding: 0 30px 0 30px;
+    p {
+      // text-indent: -60px;
+      padding: 30px 0;
+      border-bottom: 1px dashed #dcdcdc;
+      &:first-child {
+        text-indent: -60px;
+        padding-left: 60px;
+      }
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+}

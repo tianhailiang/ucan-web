@@ -1,0 +1,42 @@
+#calendar{width: 100%;border: 2px solid #fff;overflow: hidden;box-sizing: border-box;}
+#table_box{border-right:1px solid #fff ;width: 75%; float: left;}
+#table_box thead{height: 50px;line-height: 50px;border-bottom: 1px solid #fff;}
+#tbody{height: 270px;}
+#tbody tr{height: 50px;line-height: 50px;}
+#tbody tr td{text-align: center;cursor: pointer;}
+.showDay{width: 25%;}
+.daybtnbox{height: 50px;line-height: 50px;text-align: center;border-bottom: 1px solid #fff;}
+td.active{color: #e60651;position: relative;}
+td.active:after{    
+  content: '.';
+    font-size: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7px;
+    margin-top: -30px;
+    }
+.pverday,.nextday{display: inline-block;height: 50px;line-height: 50px;width: 30px;}
+.nowtime{font-size: 100px;color: #6a3906;height: 100%;text-align: center;}
+.week{text-align: center;}
+#courseListBox,#courseListBox2{width: 100%;border-collapse: collapse;}
+#courseListBox tr,#courseListBox2 tr{border:2px solid #fff;margin-top: 40px; display:block; }
+#courseListBox tr td,#courseListBox2 tr td{padding: 26px;width: 20%;text-align: center;}
+#courseListBox tr td img,#courseListBox2 tr td img{width: 200px;height: 139px;}
+#courseListBox tr td.coursePhotoText,#courseListBox2 tr td.coursePhotoText{padding-left: 0px;text-align: left;}
+#courseListBox tr td p.courseName,#courseListBox2 tr td p.courseName,p.tName{font-size: 17px;color: #6a3906;font-weight: 800;margin-bottom: 20px;line-height: 20px;}
+.courseMake{padding: 3px 5px;border-radius: 6px;margin-top: 5px;font-weight: 600;}
+a.btn{border: 1px solid #6a3906;border-radius: 6px;}
+/*登录弹出提示框样式*/
+#promptBox ul li.padl0{padding-left: 0px;}
+#promptBox{position: fixed;bottom: 0;left: 0;width: 100%;box-sizing:border-box;background: #fff;z-index: 999999999;}
+#promptBox ul{display: table;}
+#promptBox ul li img.photo{width: 200px;height: 140px;}
+#promptBox ul{border: 1px solid #dcdcdc;box-sizing:border-box;overflow: hidden;}
+#promptBox ul li{display: table-cell;vertical-align: middle;width: 20%;padding: 30px;box-sizing: border-box;min-height: 200px;}
+#promptBox ul li.br-r{border-right: 1px solid #dcdcdc;}
+#closeBtn{display: inline-block;height: 40px;width: 40px;border-radius: 50%;position: absolute;top: 0;right: 0;background: url("../img/off.png") no-repeat top center;cursor: pointer;}
+/*登录弹出提示框样式*/
+/*隐藏 约课编号*/
+.coursePhotoText p:nth-of-type(3){display: none;}
+#promptBox ul li:nth-of-type(2) p:nth-of-type(3){display: none;}

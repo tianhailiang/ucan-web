@@ -1,0 +1,5 @@
+rm -r dist
+cd src
+fis3 release prod-debug
+cd ..
+cp -r src.raw/* dist

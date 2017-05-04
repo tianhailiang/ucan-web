@@ -1,0 +1,186 @@
+body,
+html {
+	min-width: 900px;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+}
+.content{
+	height: 100%;
+}
+.main {
+	padding-top: 60px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+.top {
+	width: 100%;
+	padding: 10px 15px;
+	height: 40px;
+	background: #6A3906;
+}
+.videoContent {
+	width: 80%;
+	height: 100%;
+	background: #555;
+}
+.videoArea-dimensions{
+	width: 100%;
+	height: 94%;
+}
+-webkit-full-screen video {
+	width: 100%;
+	height: 100%;
+}
+-moz-full-screen video{
+	width: 100%;
+	height: 100%;
+}
+.stu-comment{
+	width: 20%;
+	height: 100%;
+	position: relative;
+	z-index: 9999;
+}
+.comm-i{
+	position: absolute;
+	top: 0;
+	left: -30px;
+	width: 30px;
+	height: 125px;
+	text-align: center;
+	border-radius: 10px 0 0 10px;
+}
+.comm-i a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.triangle-right{
+	display: block;
+	width: 12px;
+	height: 14px;
+	margin: 5px auto;
+	background: url("../../../img/left-right-san.png") no-repeat -17px;
+}
+.stu-talk a{
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+}
+.talk-user{
+	padding: 5px 10px;
+}
+.talk-username{
+	padding-left: 10px;
+}
+.stu-out{
+	position: absolute;
+	bottom: 40px;
+	left: -60px;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	text-align: center;
+	line-height: 60px;
+}
+.stu-out a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.stu-talk{
+	height: 100%;
+	overflow-y:auto;
+}
+.canbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgba(51,51,51,.5);
+    display: none;
+    z-index: 9999;
+}
+.canbox-2 .sc-pop {
+    z-index: 999;
+}
+.sc-pop {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    margin-top: -15%;
+    margin-left: -15%;
+    padding: 40px;
+    color: #6A3906;
+    background-color: #fff;
+}
+a {
+    cursor: pointer;
+}
+.canbox-2 .sc-title {
+    width: 100%;
+    border-bottom: 1px solid #DCDCDC;
+    height: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.sc-title span {
+    border-bottom: 1px solid #ffe100;
+    font-size: 20px;
+    color: #A0A0A0;
+    height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+}
+.canbox-2 .sc-title {
+    text-align: left;
+}
+.canbox-2 .sc-date {
+    line-height: 100px;
+}
+.canbox-3 .sc-date, .canbox-2 .sc-date {
+    text-align: center;
+    min-height: 100px;
+    line-height: 100px;
+    font-size: 18px;
+    color: #6A3906;
+}
+.sc-date {
+    margin: 10px 0;
+    max-height: 400px;
+    overflow: auto;
+    min-height: 170px;
+    border-bottom: 1px solid #DCDCDC;
+}
+.c-form {
+	margin-top: 35px;
+    text-align: center;
+}
+.c-form a.bg-c1, .c-form a.ok {
+    color: #fff;
+}
+.c-form a {
+    display: inline-block;
+    width: 100px;
+    height: 26px;
+    border: 1px solid #6a3906;
+    color: #bea776;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 26px;
+    margin-left: 20px;
+}
+.ok {
+    background: #6A3906;
+}

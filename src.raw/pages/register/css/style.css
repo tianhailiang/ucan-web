@@ -1,0 +1,83 @@
+
+body,html{min-width: 1254px;}
+header.cf{
+	border-bottom: 2px solid #6a3906;
+}
+.f_b{
+	color:#3d88f4;
+	font-size:16px;
+}
+
+/**
+ * 账户注册content
+ */
+
+.content{
+	width:590px;
+}
+#register{
+	width:440px;
+	height:420px;
+	position: relative;
+	margin:100px auto;
+}
+#register span{
+	display: inline-block;
+	color:red;
+	width:150px;
+}
+#register label{
+	text-align: right;
+		display: inline-block;
+	width:60px;
+	margin:10px;
+}
+div#tip{
+	width:450px;
+	text-align: center;
+}
+.usermessage{
+	margin:15px 10px;
+	width:310px;
+	border-radius: 20px;
+	border:1px solid #6a3906;
+	outline:medium;
+	-webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none;
+	height:35px;
+	padding:0 10px;
+}
+
+#read{
+	margin: 10px;
+}
+#read{
+	width:100%;
+	text-align: center;
+	margin: 25px;
+	font-size: 16px;
+}
+#register_button{
+	display: inline-block;
+	width:72%;
+	margin-left:23%;
+	margin-top:35px;
+	height:35px;
+	background-color: #ffe100;
+	border:1px solid #ffe100;
+	border-radius: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #6a3906;
+	letter-spacing: 10px;
+	outline:medium;
+	cursor: pointer;
+}
+#register_button:hover{
+	background-color: #ff7e00;
+}
+/**
+ * 账户注册content
+ */
+
+
+

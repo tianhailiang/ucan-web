@@ -1,0 +1,288 @@
+.btn{
+    border-radius: 5px;
+    padding: 3px 15px;
+    color: #6A3906;
+}
+div,label,input,textarea{
+    box-sizing: border-box;
+}
+a,button{
+    cursor: pointer;
+}
+.sc-kuang .list-type{
+    border-right:0;
+}
+.sc-top{
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #fff;
+}
+.sc-top h2{
+    color: #6A3906;
+    border-bottom: 1px solid #6A3906;
+}
+.sc-top button{
+    float: right;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    background: #6A3906;
+}
+.sc-kuang{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    border: 0;
+    margin-top:0;
+    border-bottom: 2px solid #fff;
+}
+ul.sc-kuang li.list-type{
+    display: none;
+}
+div.sc-kuang{
+    margin-top: 20px;
+    border: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+div.sc-kuang .btn{
+    background-color: #6A3906;
+    color: #fff;
+    padding: 1px 20px;
+    display: none;
+}
+div.sc-kuang .list-type{
+    padding: 0 15px;
+    border-right: 0;
+    display: none;
+}
+div.sc-kuang .list-type div{
+    margin-right: 10px;
+}
+.sc-kuang li{
+    list-style: none;
+    padding: 25px 15px;
+    text-align: center;
+}
+.sc-kuang .list-type{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sc-kuang .list-type div{
+    height: 21px;
+    width: 21px;
+    padding: 3px;
+    float: left;
+    border: 1px solid #6A3906;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+}
+.sc-kuang .list-type div span{
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    background: transparent;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.sc-kuang .list-type div span.choosed{
+    background: #6A3906;
+}
+.sc-kuang .sc-two{
+    width: 92%;
+}
+.courseLs{
+	display: none;
+}
+.courseL{
+	width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    margin: 5px 0;
+    padding: 0 20px;
+    border-bottom: 1px solid #fff;
+}
+.courseL span{
+	display: block;
+	height: 100%;
+    line-height: 30px;
+}
+.courseL span:nth-of-type(1){
+	width: 300px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.sc-kuang button{
+    outline: 0;
+    border: 1px solid #6A3906;
+    background: transparent;
+}
+.sc-kuang li img{
+    width: 140px;
+    height: 140px;
+    float: left;
+    margin-right: 15px;
+}
+.course-detail{
+	position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 140px;
+}
+.course-detail>span{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.course-detail h3{
+    font-size: 18px;
+    color: #6A3906;
+    float: left;
+    cursor: default;
+    margin-bottom: 5px;
+    text-shadow: 0 0 1px #6A3906;
+}
+.course-detail p{
+    float: left;
+    clear: both;
+    font-size: 16px;
+    line-height: 26px;
+}
+.pages{
+    height: 27px;
+    border: 1px solid #6A3906;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: none;
+}
+.pages li{
+    float: left;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-right: 1px solid #6A3906;
+}
+.pages li:hover{
+    background: #F5E8AE;
+}
+.pages li.cur{
+    color: #fff;
+    background: #6A3906;
+}
+.pages li:last-child{
+    border-right: 0;
+}
+.canbox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgba(51,51,51,.5);
+    display: none;
+}
+.sc-pop{
+    overflow: auto;
+    position: relative;
+    top: 40px;
+    left: 50%;
+    width: 60%;
+    margin-left: -30%;
+    padding: 40px;
+    color: #6A3906;
+    background-color: #fff;
+}
+.canbox-3 .sc-date{
+    text-align: center;
+    min-height: 100px;
+    line-height: 100px;
+    font-size: 18px;
+    color: #6A3906;
+}
+.c-off{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+.sc-title{
+    width: 100%;
+    border-bottom: 1px solid #DCDCDC;
+    height: 30px;
+    margin-bottom: 20px;
+}
+.sc-title span{
+    border-bottom: 1px solid #ffe100;
+    font-size: 20px;
+    color: #A0A0A0;
+    line-height:30px;
+}
+.sc-date{
+    margin: 10px 0;
+    max-height: 400px;
+    overflow: auto;
+    min-height: 170px;
+    border-bottom: 1px solid #DCDCDC;
+}
+.course-detail h3{
+    width:200px;
+}
+.c-form{
+    height: 26px;
+    text-align: center;
+}
+.c-form a{
+    display: inline-block;
+    width: 100px;
+    height: 26px;
+    border: 1px solid #6a3906;
+    color: #bea776;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 26px;
+    margin-left: 20px;
+}
+.c-form a.bg-c4{
+    color: #6A3906;
+}
+.c-form a.bg-c1{
+    color: #fff;
+}

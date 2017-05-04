@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=EmulateIE10"/>
+		<title>直播回放频 - 优看 uCan</title>
+    <link rel="shortcut icon" href="../../img/ucan.ico">
+		<link rel="stylesheet" href="../../css/base.css">
+		<link rel="stylesheet" href="../../css/border.css">
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/header.css" />
+		<link rel="stylesheet" href="../../css/footer.css">
+		<link rel="stylesheet" href="css/myCourseVideo.css">
+		<link rel="stylesheet" href="../teacherPersonalInfo/css/personalInfo.css">
+		<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+	</head>
+
+	<body>
+		<header class="cf">
+		<a class="logo" href="../../index.html"><img src="../../img/logo.png" /></a>
+		<nav>
+			<div class="search">
+				<select>
+					<option value="0">搜教师</option>
+					<option value="1">搜课程</option>
+				</select>
+				<input type="text" name="" id="">
+				<a class="b"></a>
+			</div>
+			<ul>
+				<li><a class="nav-index" href="../../index.html">首页</a></li>
+				<li><a href="../../classroom.html">直播课堂</a></li>
+				<li><a href="../teacherList/teacherList.html">名师国际</a></li>
+				<li><a href="../courseList/courseList.html">一对一家教</a></li>
+				<!--            <li><a href="#">微校</a></li>-->
+				<li><a class="nav-quxue" href="../../quxue.html">趣学英语</a></li>
+				<!--            <li><a href="#">智力游戏</a></li>-->
+				<li><a class="nav-about" href="../../about.html">关于优看</a></li>
+				<!--            <li><a href="#">下载APP</a></li>-->
+			</ul>
+		</nav>
+	</header>
+		<div class="content oh">
+			<div class="frame-nav fn-c0 bg-c0 oh">
+				<ul class="w c">
+					<li class="fl"><a class="homePage fn-c0" href="">个人中心首页
+						<span class="triangle-border-up"></span>
+						</a></li>
+					<li class="fl"><a class="setting fn-c0" href="">个人信息</a></li>
+				</ul>
+			</div>
+			<div class="frame-con w c oh">
+				<div class="frame-title fl">
+					<div class="frame-head">
+						<img src="../../img/logo.png" width="150px" height="150px" alt="">
+						<div class="frame-user bg-c1">
+							<p>用户名</p>
+							<p>ID 12345</p>
+						</div>
+					</div>
+					<div class="left-nva">
+						<ul>
+							<li class="left-nva-a bg-c2">
+								<a class="fn-c0" href="../myTimetable/T_myTimetable.html">我的课表</a>
+							</li>
+							<li class="left-nva-a bg-c2">
+								<a class="fn-c0" href="../courseOpt/courseOpt.html">课程设置</a>
+							</li>
+							<li class="left-nva-a bg-c2  bg-c3">
+								<a class="fn-c0" href="../myCourseVideo/myCourseVideoTeacher.html">直播回放</a>
+							</li>
+							<li class="left-nva-a bg-c2">
+								<a class="fn-c0" href="../myStudent/myStudent.html">学生管理</a>
+							</li>
+							<li class="left-nva-a bg-c2">
+								<a class="fn-c0" href="../teacherEvaluate/teacherEvaluate.html">评价管理</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="frame-rg bg-c2 fl oh" id="table_content">
+					<div id="courseListBoxHeader">
+						<span id="nowTeacher" class="active in-b">课程回放</span>
+					</div>
+					<table  cellspacing="" cellpadding="" id="courseListBox" class="table"></table>
+					<div></div>
+				</div>
+			</div>
+
+
+			<!--<div class="SendCourse">发布精品课</div>-->
+			<div class="canbox canbox-2">
+				<!-- 保存成功弹出框-->
+				<div class="sc-pop">
+					<a class="c-off" href=" "><img src="../../img/off.png" width="100%" alt=""/></a>
+					<div class="sc-title">
+						<span>温馨提示</span>
+					</div>
+					<div class="sc-date">
+					</div>
+					<div class="c-form">
+						<a href="javascript:;" class="bg-c1 ">确定</a >
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+		<div class="footer-bottom">
+		<p><a href="../../index.html">首页</a> <span>|</span> <a href="../../about.html">关于优看</a> <span>|</span> <a href="../register/register.html">免费注册</a>
+			<br> ©2016 优看网络 版权所有</p>
+	</div>
+	</body>
+	<script type="text/javascript" src="../../js/public.js" ></script>
+	<script type="text/javascript" src="../../js/userIf.js" ></script>
+	<script type="text/javascript" src="js/myCourseVideoTeacher.js"></script>
+	<script>
+		$(".left-nva ul li").click(function() {
+			$(this).siblings(".left-nva-a").removeClass('bg-c3');
+			$(this).addClass('bg-c3');
+		});
+	</script>
+
+</html>

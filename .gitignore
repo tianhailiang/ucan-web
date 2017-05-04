@@ -1,0 +1,5 @@
+*~
+.proj*
+.id*
+dist
+*.json

@@ -1,0 +1,172 @@
+body,
+html {
+	min-width: 900px;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+}
+.content{
+	height: 100%;
+}
+.main {
+	padding-top: 60px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+.top {
+	width: 100%;
+	padding: 10px 15px;
+	height: 40px;
+	background: #6A3906;
+}
+.videoContent {
+	width: 80%;
+	height: 100%;
+	background: #555;
+}
+.videoArea-dimensions{
+	width: 100%;
+	height: 100%;
+}
+-webkit-full-screen video {
+	width: 100%;
+	height: 100%;
+}
+-moz-full-screen video{
+	width: 100%;
+	height: 100%;
+}
+.stu-comment{
+	width: 20%;
+	height: 100%;
+	position: relative;
+	z-index: 9999;
+}
+.comm-i{
+	position: absolute;
+	top: 0;
+	left: -30px;
+	width: 30px;
+	height: 125px;
+	text-align: center;
+	border-radius: 10px 0 0 10px;
+}
+.comm-i a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.triangle-right{
+	display: block;
+	width: 12px;
+	height: 14px;
+	margin: 5px auto;
+	background: url("../../../img/left-right-san.png") no-repeat -17px;
+}
+.stu-talk p{
+	text-align: center;
+	padding: 10px 0;
+}
+.talk-user{
+	padding: 5px 10px;
+}
+.talk-username{
+	padding-left: 10px;
+}
+
+
+/*弹出框*/
+.popup-fix{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 700px;
+	height: 500px;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	z-index: 9999;
+}
+.popup-fix .c-off{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+}
+.p-center{
+	margin: 40px;
+}
+.c-title-l{
+	width: 250px;
+	height: 150px;
+	margin-right: 40px;
+}
+.c-title-r{
+	width: 330px;
+}
+.teach-name{
+	margin: 15px 0;
+}
+.teach-time{
+	margin: 10px 0;
+}
+.teach-time p{
+	margin: 5px 0;
+}
+.c-renzheng img{
+	width: 90px;
+}
+.course-title{
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+.c-fol{
+	line-height: 20px;
+}
+.text-area{
+	width: 100%;
+	margin: 20px 0;
+	padding: 10px;
+	box-sizing: border-box;
+	resize: none;
+}
+.c-form{
+	position: absolute;
+	bottom: 15px;
+	right: 40px;
+	height: 26px;
+}
+.c-form a{
+	display: inline-block;
+	width: 100px;
+	height: 26px;
+	border: 1px solid #6a3906;
+	color: #bea776;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 26px;
+	margin-left: 20px;
+}
+.stu-out{
+	position: absolute;
+	bottom: 40px;
+	left: -60px;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	text-align: center;
+	line-height: 60px;
+}
+.stu-out a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.stu-talk{
+	height: 100%;
+	overflow-y:auto;
+}

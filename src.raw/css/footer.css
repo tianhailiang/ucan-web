@@ -1,0 +1,16 @@
+.footer-bottom {
+  height: 75px;
+  background: #6a3906;
+  text-align: center;
+  color: #eee;
+  margin-top: 40px;
+}
+.footer-bottom p {
+  padding: 10px 0 5px;
+}
+.footer-bottom a {
+  color: #eee;
+}
+.footer-bottom span {
+  margin: 0 5px;
+}

@@ -1,0 +1,483 @@
+div,ul,li{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sc-top{
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #fff;
+}
+.sc-top h2{
+    font-size: 22px;
+    float: left;
+    border-bottom: 1px solid #6A3906;
+    color: #6a3906;
+    height: 44px;
+    line-height: 44px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sc-top a{
+    line-height: 24px;
+    float: right;
+    color:#00e;
+    margin-top: 10px;
+    padding-left: 18px;
+    background: url("../../../img/pencil.png") no-repeat;
+    background-position: 0 0;
+}
+ul.info-key{
+    float: left;
+    margin-top: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+ul.info-key li{
+    padding: 10px;
+    color: #6A3906;
+    height: 44px;
+}
+ul.info-key li span:first-child{
+    color: #6A3906;
+    font-size: 16px;
+    float: left;
+    width: 130px;
+}
+ul.info-key li span:last-child{
+     color: #000;
+     float: left;
+    font-size: 14px;
+}
+ul.setting-value{
+    width:970px;
+    height:auto;
+    margin-top: 20px;
+    float: left;
+    display: none;
+}
+ul.setting-value li{
+    padding: 10px;
+    font-size: 14px;
+    height: 44px;
+    text-align: left;
+    line-height: 24px;
+    position: relative;
+    width: 900px;
+}
+ul.setting-value li span{
+    color: #6A3906;
+    font-size: 16px;
+    float: left;
+    height: 24px;
+    margin-right:10px;
+}
+ul.setting-value li input{
+    height: 24px;
+    padding: 0 10px;
+    color: #333;
+    line-height: 22px;
+    border: 1px solid #a0a0a0;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 0px;
+    outline: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+ul.setting-value li.my_name span{
+    width:40px;
+}
+ul.setting-value li.my_name input{
+    width:260px;
+}
+ul.setting-value li.my_school span{
+    width:80px;
+    margin-right:10px;
+}
+ul.setting-value li.my_school input{
+    width:220px;
+}
+ul.setting-value li.my_pro span{
+    width: 128px;
+}
+ul.setting-value li.my_pro input{
+    width:550px;
+}
+ul.setting-value li.my_pro span.warning{
+    left:708px;
+}
+ul.setting-value li a{
+    margin-left: 30px;
+    color:#00e;
+}
+ul.setting-value li span.warning{
+    position: absolute;
+    top: 10px;
+    left:330px;
+    color: #9a9a9a;
+    font-size: 12px;
+    width: 170px;
+}
+ul.setting-value li span.my_date{
+    left: 330px;
+}
+ul.setting-value li span.red {
+    position: absolute;
+    top: 10px;
+    left: 460px;
+    color: #f00;
+    font-size: 12px;
+    width:200px;
+}
+ul.setting-value li.identify div{
+    float: left;
+    color: #333;
+    padding-right: 40px;
+    overflow: hidden;
+    line-height: 24px;
+    cursor: pointer;
+}
+ul.setting-value li button,ul.info-key button{
+    color: #fff;
+    outline: 0;
+    padding: 0 15px;
+    line-height: 25px;
+    background-color: #6A3906;
+    border: 1px solid #6A3906;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ul.setting-value button.save,ul.info-key button.save{
+    margin-right: 30px;
+}
+ul.setting-value button.cancel,ul.info-key button.cancel{
+    background: transparent;
+    color: #6A3906;
+}
+li.identify span.list-style{
+    float: left;
+    height: 15px;
+    width: 15px;
+    padding: 2px;
+    margin: 5px 5px 0 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    border: 1px solid #d2d2d2;
+}
+span.list-style i.choosed{
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    background: #d2d2d2;
+    display: block;
+    height: 9px;
+    width: 9px;
+}
+.per-photo{
+    float: right;
+    margin-top: 40px;
+    width: 200px;
+}
+.per-photo img{
+    vertical-align: top;
+    width: 200px;
+    height: 200px;
+}
+.per-photo div.upload{
+    background: #444;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.per-photo div.upload:hover{
+    background:#666;
+}
+#upload input{
+    height:100%;
+    width:100%;
+    vertical-align:top;
+    opacity:0;
+}
+.webuploader-pick+div{
+    opacity: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+#fileList{
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    text-align: center;
+    line-height: 200px;
+}
+
+
+.c-form{
+    height: 26px;
+    text-align: center;
+}
+.c-form a{
+    display: inline-block;
+    width: 100px;
+    height: 26px;
+    border: 1px solid #6a3906;
+    color: #bea776;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 26px;
+    margin-left: 20px;
+}
+.c-form a.bg-c4{
+    color: #6A3906;
+}
+.c-form a.bg-c1,.c-form a.ok{
+    color: #fff;
+}
+.ok{
+	background:#6A3906;
+}
+.c-off{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+.canbox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgba(51,51,51,.5);
+    display: none;
+}
+a{
+    cursor: pointer;
+}
+.sc-pop{
+    overflow: auto;
+    position: relative;
+    top: 40px;
+    left: 50%;
+    width: 60%;
+    margin-left: -30%;
+    padding: 40px;
+    color: #6A3906;
+    background-color: #fff;
+}
+.sc-pop p{
+    margin-bottom: 20px;
+    background: #fff;
+    font-size: 14px;
+    padding-left: 70px;
+}
+.canbox-3 .sc-title{
+    width: 100%;
+    border-bottom: 1px solid #DCDCDC;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.canbox-2 .sc-title{
+	width: 100%;
+    border-bottom: 1px solid #DCDCDC;
+    height: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.sc-title span{
+    border-bottom: 1px solid #ffe100;
+    font-size: 20px;
+    color: #A0A0A0;
+    height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.sc-date{
+    margin: 10px 0;
+    max-height: 400px;
+    overflow: auto;
+    min-height: 170px;
+    border-bottom: 1px solid #DCDCDC;
+}
+.canbox-2 .sc-pop{
+	width:40%;
+	top:80px;
+	margin-left:-20%;
+}
+.canbox-3 .sc-date,.canbox-2 .sc-date{
+    text-align: center;
+    min-height: 100px;
+    /*line-height: 100px;*/
+    font-size: 18px;
+    color: #6A3906;
+}
+.canbox-2 .sc-date{
+	line-height:100px;
+}
+.sc-date li{
+    position:relative;
+    width: 86%;
+    margin: auto;
+    line-height: 30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.red.ee {
+    position: absolute;
+    right: 0;
+    display:none;
+}
+.sc-date li span{
+    width: 100px;
+    float: left;
+    text-align: right;
+    font-size: 16px;
+}
+.sc-date li input{
+    float: left;
+    padding: 2px 10px;
+    outline: 0;
+    color: #444;
+    height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sc-date .mailbox{
+    width: 400px;
+}
+.sc-date .valicode{
+    width: 250px;
+}
+.sc-date .valicode+button{
+    float: left;
+    margin-left: 20px;
+    background: #6A3906;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/***2017-03-18新增select样式*/
+.setting-value li select{
+    height: 24px !important;
+    width: 300px !important;
+    padding: 0 10px;
+    color: #333;
+    line-height: 22px;
+    border: 1px solid #a0a0a0;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 0px;
+    outline: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background:#fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+.setting-value li select::-ms-expand { display: none; }
+
+/*修改密码样式*/
+ul.info-key li.my_pwd{
+    width:100px;
+    height:40px;
+    border:1px solid #dedede;
+    background:#6A3906;
+    color:#fff;
+    text-align:center;
+    margin-left:10px;
+    margin-bottom:20px;
+}
+ul.info-key li.my_pwd:hover{
+    background:#8E6A21;
+    cursor:pointer;
+}
+ul.info-key li.my_pwd a{
+    color:#fff;
+}
+ul.info-key li.my_pwd:hover a{
+    color:#fff;
+}
+ul.info-key li.my_school input{
+    width:250px;
+    padding-left:10px;
+    margin-right:10px;
+}
+ul.info-key li.my_school,ul.info-key li.my_btn{
+    display:none;
+}
+ul.info-key li.my_school{
+    width:600px;
+    position:relative;
+}
+ul.info-key li.my_school span.red{
+    position:absolute;
+}
+ul.info-key li span.red{
+    position: absolute;
+    top: 14px;
+    left: 284px;
+    font-size: 12px;
+    width: 200px;
+    color: #f00;
+}
+.red{
+    position: absolute;
+    top: 14px;
+    left: 284px;
+    font-size: 12px;
+    width: 170px;
+}
+ul.info-key li.my_school input[name=pwdold]{
+    float:left;
+}

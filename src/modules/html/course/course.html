@@ -1,0 +1,43 @@
+<div class="recom-course lo-home slider-outer" id="recom-course" data-ox="40">
+
+    <h2 class="title-bar">
+        <span>课程推荐</span>
+    </h2>
+
+    <div class="tl-btn-container" v-if="rows.length>3">
+        <a class="tl-forward tl-btn">
+            <span class="tl-right-arrow"></span>
+        </a>
+        <a class="tl-backward tl-btn disabled">
+            <span class="tl-left-arrow"></span>
+        </a>
+    </div>
+
+    <div class="slider-wrapper">
+        <ul class="slider-el lo-home cf" v-bind:style="'width:'+(rows.length*418) + 'px'">
+            <li v-for="(item, index) in rows">
+                <a v-bind:href="'./course.html?courseId=' + item.id">
+                    <img v-bind:src="item.ucanFile" class="img"/>
+                    <div class="sub-info">
+                        <span v-text="item.topic.topic" class="type"></span>
+                        <span v-text="item.name" class="rc-title"></span>
+                        <span v-text="item.maxStudentCount" class="play-num"></span>
+                        <div v-text="item.attention" class="comment-num"></div>
+                    </div>
+
+                    <div class="bom-info">
+                      	  主讲: <em v-text="item.teacher.name"></em> | <em v-text="item.teacher.about"></em>
+                    </div>
+                    <span v-if="item.minCost" class="fee">￥<em v-text="item.minCost"></em></span>
+                    <span v-if="!item.minCost" class="fee">免费</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    require.async('./course.js', function(app){
+        app.init();
+    });
+</script>

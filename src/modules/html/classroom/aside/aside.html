@@ -1,0 +1,42 @@
+<div class="class-aside" id="class-aside">
+    <div class="ztl-header">
+        <h2 class="tl-title">即将直播</h2>
+        <div class="tl-btn-container">
+            <a class="tl-forward tl-btn"
+               v-on:click="if(index<maxIndex){index++;rowsTwo=currentRows.slice(index * size, (index + 1) * size)}"
+               v-bind:class="{'disabled': index===maxIndex}">
+                <span class="tl-right-arrow"></span>
+            </a>
+            <a class="tl-backward tl-btn"
+               v-on:click="if(index>0){index--;rowsTwo=currentRows.slice(index * size, (index + 1) * size);}"
+               v-bind:class="{'disabled': index===0}">
+                <span class="tl-left-arrow"></span>
+            </a>
+        </div>
+    </div>
+    <div class="course-content">
+        <ul class="slider-el lo-home cf" style="margin: 60px auto 0px;">
+            <li v-for="(item, index) in rowsTwo">
+                <a v-bind:href="'./course.html?courseId=' + item.coursePlans.courses.id">
+                    <span class="img" v-bind:style="'background-size:100% 100%;background-image:url(' + item.coursePlans.courses.ucanFile + ')'">
+                    	<span>
+                    		<i v-bind:class="'bg-cc' + item.coursePlans.courses.topic.id" v-text="item.coursePlans.courses.topic.topic"></i>
+                    		<em v-text="item.beginTime"></em>
+                    	</span>
+                    </span>
+                	<p class="fn-w6"><span class="cOoo" v-text="item.mode == 'ooo' ? '1对1' : '直播'">1对1</span><em v-text="item.coursePlans.courses.name"></em></p>
+	                <a style="margin:0" v-bind:href="'./pages/teacherHome/teacherHome.html?teacherId=' + item.coursePlans.courses.teacher.id">
+	                	<span class="join-num"><em>授课老师：</em><em v-text="item.coursePlans.courses.teacher.name"></em></span>
+	                </a>
+	                <span class="fee" v-bind:class="{free:item.cost === 0 || item.cost == null}" v-text="item.cost ? '￥' + item.cost : '免费'"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    require.async('./aside.js', function(app){
+        app.init();
+    });
+</script>

@@ -1,0 +1,66 @@
+@import url(/modules/css/config.less);
+
+.index-nav {
+  // .flex();
+  flex-direction: row;
+  .in-item {
+    border-radius: 12px;
+    width: 210px;
+    padding: 60px 35px 0;
+    height: 340px;
+    font-size: 12px;
+    line-height: 1.5;
+    &:before {
+      content: '';
+      display: block;
+      width: 110px;
+      height: 166px;
+      margin-left: auto;
+      margin-right: auto;
+      background: url(./bg.png) no-repeat;
+    }
+    p {
+      height: 80px;
+    }
+    a {
+      margin: 5px auto;
+    }
+  }
+
+  .in-item-live {
+    background: #c5f9ff;
+    a {
+      .btn(100px, 28px, 4px, #f39800);
+    }
+  }
+
+  .in-item-teacher {
+    background: #fff9d0;
+    a {
+      .btn(100px, 28px, 4px, #8fc31f);
+    }
+    &:before {
+      background-position: -324px 0;
+    }
+  }
+
+  .in-item-english {
+    background: #ffe7eb;
+    a {
+      .btn(100px, 28px, 4px, #1796d1);
+    }
+    &:before {
+      background-position: -648px 0;
+    }
+  }
+
+  .in-item-school {
+    background: #e3fbae;
+    a {
+      .btn(100px, 28px, 4px, #f48dab);
+    }
+    &:before {
+      background-position: -972px 0;
+    }
+  }
+}

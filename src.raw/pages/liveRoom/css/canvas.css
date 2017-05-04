@@ -1,0 +1,132 @@
+body,html,ul,li{
+    padding: 0;margin: 0;list-style: none;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+.box{
+    width: 890px;height: 600px;margin: 40px auto 0;padding: 40px;background: #555555;
+}
+.box .menu{
+    width: 100%;height:50px;border: 1px solid #ccc;
+    display: none;
+}
+.box .menu li{
+    width:16.666666666%;float: left;line-height: 44px;text-align: center;font-size: 14px;cursor: pointer;margin: 3px 0;height: 44px;border-radius: 10px;
+}
+.body{
+    width: 100%;height: 100%;background: #fff2b8;
+    position: relative;
+}
+.teacherPhoto{
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	background: #000;
+	z-index: 999999;
+	top: -60px;
+	left: 40px;
+}
+.body .tool{
+	position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    z-index: 2222;
+}
+.body .canvas{
+    width: 100%;height: 100%;float: left;position: absolute;
+}
+.canvas .copy{
+    width: 100%;height: 100%;position: absolute;left: 0;top: 0;z-index: 10;
+}
+.body .option{
+    width: 100%;display: none;
+}
+.body .option li{
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+    cursor: pointer;
+    float:left;
+    padding: 6px;
+}
+.tool .op-active{
+    display: block;
+    overflow: hidden;
+    background: #e5e5e5;
+    border-radius: 0 6px 6px 0;
+}
+.body input[type=number]{
+    width: 96px;height:50px;padding:0;margin: 0;
+}
+.body input[type=color]{
+    width: 96px;height:50px;padding:0;margin: 0;
+}
+.canvas .xp{
+    width: 10px;height: 10px;
+    /*border: 1px solid #000;*/
+    position: absolute;left: 0;top: 0;display: none;
+}
+#canvas1{
+	position: absolute;
+	/*border:3px solid chocolate;*/
+	top:0;
+	/*z-index: 100;*/
+}
+#canvas2{
+	position: absolute;
+	/*border:1px solid cadetblue;*/
+	top:0;
+
+}
+#canvas3{
+	position: absolute;
+	/*border:1px solid cadetblue;*/
+
+}
+#canvas4{
+	position: absolute;
+	/*border:1px solid cadetblue;*/
+	top:0;
+
+}
+.pen,.conversion,.enlarge,.eraser,.my_line,span.my_button,.baiban{
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+	background: url("../../../img/video_btn2.png") no-repeat top center;
+	vertical-align: middle;
+	background-size: 100% 100%;
+}
+span.conversion{background-image:url('../../../img/video_btn3.png') ;}
+span.enlarge{background-image:url('../../../img/video_btn1.png') ;}
+span.eraser{background-image:url('../../../img/eraser_2.png');}
+span.my_line{width:5px;height:20px;background: url('../../../img/my_line.png') no-repeat top center;}
+span.my_button_left{background: url('../../../img/my_left.png') no-repeat center center;}
+span.my_button_right{background: url('../../../img/my_right.png') no-repeat center center;}
+span.baiban{background: url('../../../img/baiban.png') no-repeat center center;background-size: 100% 100%;}
+input{
+	height:50px;
+	width: 100px;
+	margin:0 50px;
+}
+.body .option li.my_btn{padding-left:0;}
+.my_button{width:26px;height:26px;}
+#loadingBg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display:none;
+}
+#loading_img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 128px;
+	height: 128px;
+	margin-left: -64px;
+	margin-top: -64px;
+}

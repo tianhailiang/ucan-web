@@ -1,0 +1,106 @@
+.hom-top{
+	width: 100%;
+}
+.hom-title{
+	position: relative;
+	margin-bottom: 30px;
+}
+.tch-ti{
+	margin-left: 320px;
+	padding: 20px;
+}
+.tch-ti span{
+	margin-left: 20px;
+	padding: 5px;
+	border-radius: 8px;
+}
+.tch-ti p{
+	margin-top: 15px;
+}
+.tch-ti span{
+	cursor: pointer;
+    color: #585858;
+    text-decoration: none;
+    line-height: 36px;
+    font-size: 16px;
+}
+.tch-ti span i{
+	display: inline-block;
+    vertical-align: top;
+    margin-top: 13px;
+    margin-right: 5px;
+    width: 19px;
+    height: 17px;
+    background: url('../../../img/i-sc.png') no-repeat;
+}
+.collection{
+	z-index: 99;
+}
+.tch-header{
+	position: absolute;
+	top: -200px;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	border: 10px solid #fff;
+}
+.course-T{
+	border: 1px solid #ddd;
+	padding: 30px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+.course-T h4{
+	position: relative;
+	padding: 5px 0;
+	margin-bottom: 30px;
+}
+.course-T h4 span{
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	height: 1px;
+	width: 80px;
+}
+.cou-deta{
+	width: 50%;
+	height: 142px;
+	margin-bottom: 30px;
+}
+.course-arr{
+	display: inline-block;
+	padding: 0 30px;
+}
+.course-arr p{
+	margin: 10px 0;
+}
+.course-arr a{
+	display: block;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 10px;
+	width: 165px;
+	height: 35px;
+	padding: 0 10px;
+}
+
+.s-comment{
+	padding: 30px;
+	border-bottom: 2px solid #fff;
+}
+.comment-l{
+	width: 100px;
+	margin-right: 40px;
+}
+.comment-l p{
+	text-align: center;
+	line-height: 46px;
+	font-weight: 600;
+}
+.comment-r{
+	width: 780px;	
+}
+.comment-r p{
+	margin: 15px 0;
+}
+

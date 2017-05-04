@@ -1,0 +1,257 @@
+/**
+ * @fileOverview button[按钮]
+ * @author guizi
+ * @date   2013-08-29
+ * @update 2017-02-17 bilipeng for pi
+ * @mail   guiqinqin@baidu.com
+ */
+
+/* 新版本按钮样式
+ ==================================*/
+.fis-gradient-vertical (@top, @bottom) {
+  background: linear-gradient(to bottom, @top, @bottom);
+}
+.fis-box-shadow(@t) {
+  box-shadow: @t;
+}
+.fis-border-radius(@radius) {
+  border-radius: @radius;
+}
+.btnfunc(){
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  // vertical-align: top;
+  border: 1px solid transparent;
+  .fis-border-radius(2px);
+  &:hover,&:active {
+    text-decoration: none;
+  }
+}
+
+.btn, a.btn {
+  .btnfunc;
+}
+
+.btn-height(@height){
+  height: @height - 2px;
+  line-height: @height - 2px;
+}
+
+.btn-disabled() {
+  color: #7f7f7f !important;
+  background: #efefef !important;
+  border-color: #efefef !important;
+  cursor: default !important;
+}
+
+.font-yahei(){
+  font-family: "Microsoft Yahei";
+}
+
+.font-white(){
+  &,&:link,&:visited{
+    color: #fff;
+    text-decoration:none;
+  }
+}
+
+.font-color(@color:#333){
+  &,&:link,&:visited{
+    color: @color;
+    text-decoration:none;
+  }
+}
+
+/*24px高度按钮*/
+.btn-24 {
+  .btnfunc;
+  .btn-height(24px);
+  .font-yahei;
+  font-size: 14px;
+}
+
+/*30px高度按钮*/
+.btn-30 {
+  .btnfunc;
+  .btn-height(30px);
+  .font-yahei;
+  font-size: 14px;
+}
+
+/*32px高度按钮*/
+.btn-32 {
+  .btnfunc;
+  .btn-height(32px);
+  .font-yahei;
+  font-size: 14px;
+}
+
+/*33px高度按钮*/
+.btn-33 {
+  .btnfunc;
+  .btn-height(33px);
+  .font-yahei;
+  font-size: 14px;
+}
+
+
+.btn-32-green, a.btn-32-green {
+  .btn-32;
+  border-color: #4ACA6D;
+  background: #4ACA6D;
+  outline: none;
+  .font-white;
+
+  &:hover {
+    border-color: #35B558;
+    .fis-gradient-vertical(#35B558, #35B558);
+    .fis-box-shadow(0 1px 1px #f2f2f2);
+  }
+}
+
+
+
+.btn-32-white, a.btn-32-white {
+  .btn-32;
+  border-color: #ccc;
+  .font-color(#333);
+  background-color: #FFF;
+  outline: none;
+  &:hover {
+    border-color: #dbdbdb;
+    .fis-gradient-vertical(#fefefe, #f8f8f8);
+    .fis-box-shadow(0 1px 1px #f2f2f2);
+  }
+}
+
+.btn-32-disabled, a.btn-32-disabled {
+  .btn-32;
+  .btn-disabled;
+}
+
+.btn-24-green, a.btn-24-green {
+  .btn-24;
+  border-color: #45a500;
+  .font-white;
+  .fis-gradient-vertical(#4ab200, #3e9a00);
+  .fis-box-shadow(0 1px 1px #f2f2f2);
+}
+
+.btn-24-white, a.btn-24-white, .btn-24-white1, a.btn-24-white1, .btn-24-white2, a.btn-24-white2 {
+  .btn-24;
+  border-color: #dbdbdb;
+  .font-color(#60a506);
+  .fis-gradient-vertical(#ffffff, #fdfdfd);
+  .fis-box-shadow(0 1px 1px #f2f2f2);
+
+  &:hover {
+    border-color: #d0d0d0;
+  }
+}
+
+.btn-24-white1, a.btn-24-white1 {
+  padding: 0px 8px;
+  .font-color(#666);
+}
+
+.btn-24-white2, a.btn-24-white2 {
+  .font-color(#000);
+  font-weight: bold;
+}
+
+
+/* pi 新的button样式*/
+/* 宽度为113,高度为33 的绿色按钮*/
+.btn-primary {
+  .btn-33;
+  width: 111px;
+  border-color: #559f81;
+  background: #559f81;
+  outline: none;
+  .font-white;
+  &:hover {
+    border-color: #57ad90;
+    background: #57ad90;
+  }
+}
+/* 宽度为113,高度为33 的白色按钮*/
+.btn-default {
+  .btn-33;
+  width: 111px;
+  border-color: #e2e2e2;
+  background: #fff;
+  outline: none;
+  .font-color(#585858);
+  &:hover {
+    border-color: #6da995;
+  }
+}
+/* 宽度为113,高度为33 的灰色背景的按钮*/
+.btn-gray {
+  .btn-33;
+  width: 111px;
+  border-color: #efefef;
+  background: #efefef;
+  outline: none;
+  .font-color(#7f7f7f);
+  &:hover {
+    background: #efefef;
+  }
+}
+
+/* 宽度为90,高度为32 的绿色按钮*/
+.btn-primary-small {
+  .btn-32;
+  width: 88px;
+  border-color: #559f81;
+  background: #559f81;
+  outline: none;
+  .font-white;
+  &:hover {
+    border-color: #57ad90;
+    background: #57ad90;
+  }
+}
+/* 宽度为76,高度为32 的白色按钮*/
+.btn-default-small {
+  .btn-32;
+  width: 74px;
+  border-color: #e2e2e2;
+  background: #fff;
+  outline: none;
+  .font-color(#585858);
+  &:hover {
+    border-color: #6da995;
+  }
+}
+
+/* 宽度为90,高度为32 的灰色背景的按钮*/
+.btn-gray-small {
+  .btn-32;
+  width: 88px;
+  border-color: #efefef;
+  background: #efefef;
+  outline: none;
+  .font-color(#7f7f7f);
+  &:hover {
+    background: #efefef;
+  }
+}
+
+/* 宽度为113,高度为33 的淡蓝色背景的按钮*/
+.btn-special {
+  .btn-33;
+  width: 111px;
+  border-color: #c8d6df;
+  background: #f6f9fa;
+  outline: none;
+  .font-color(#585858);
+  &:hover {
+    background: #e5eff2;
+  }
+}
+
+

@@ -1,0 +1,219 @@
+.class-room-layout {
+  padding: 40px 0;
+}
+
+.classroom-main {
+  float: left;
+  width: 850px;
+
+  .carousel-box {
+    width: 850px;
+    height: 190px;
+    background: #6a3906;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .tl-title {
+    margin-top: 20px;
+  }
+
+  .cul {
+    border: 1px solid #dcdcdc;
+    background: #eee;
+    height: 28px;
+    line-height: 28px;
+    li {
+      float: left;
+      padding: 0 10px;
+    }
+    a {
+      color: #000;
+    }
+    .cur {
+      color: #eb6100;
+    }
+    .sort-type-price {
+      padding-right: 20px;
+      position: relative;
+      span {
+        position: absolute;
+        border: 6px solid transparent;
+        right: 2px;
+      }
+      .up {
+        border-bottom-color: #aaa;
+        top: 1px;
+      }
+      .down {
+        border-top-color: #aaa;
+        top: 15px;
+      }
+    }
+  }
+  .sort-type {
+    position: relative;
+    .price-range:hover {
+      .price-content {
+        display: block;
+      }
+    }
+    .downT{
+        display: inline-block;
+        position: relative;
+//      left: 12px;
+        top: -2px;
+        width: 8px;
+        height: 8px;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        border-color: #000;
+        margin-left: 5px;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .price-content {
+      position: absolute;
+      top: 28px;
+      left: 255px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      display: none;
+      z-index: 99;
+      li {
+        float: none;
+        text-align: center;
+        &:hover {
+          cursor: pointer;
+          background-color: #eee;
+        }
+      }
+    }
+  }
+  .course-type {
+    margin: 10px 0;
+  }
+
+  .main-sort-type {
+    float: left;
+  }
+
+  .sort-type-plus {
+    float: right;
+    li {
+      padding: 0 10px 0 24px;
+      position: relative;
+      line-height: 28px;
+      span {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        left: 0;
+        top: 7px;
+      }
+    }
+  }
+
+  .course-content {
+    img{
+        display: none;
+        margin-top: 100px;
+    }
+    ul {
+      //display: -webkit-flex;
+      //display: flex;
+      //justify-content: space-between;
+      //flex-wrap: wrap;
+      li {
+        float: left;
+        margin-right: 38px;
+        &:nth-of-type(3n){
+          margin-right: 0;
+        }
+      }
+    }
+    a {
+      display: block;
+      width: 258px;
+      margin-top: 42px;
+      p{
+        margin: 10px 0;
+        word-break: break-word;
+        font-weight: 600;
+        color: #000;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        .cOoo{
+            width: auto;
+            padding: 0px 7px;
+            border-radius: 5px;
+            color: #6A3906;
+            margin-right: 5px;
+            display: inline-block;
+            background-color: #ffe100;
+            float: left;
+        }
+      }
+      span {
+        display: block;
+        width: 254px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        &.img {
+          height: 166px;
+          border: 1px solid #ccc;
+          background: #efefef;
+          background-size: 100% 100%;
+        }
+      }
+      .img{
+        position: relative;
+        span{
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            line-height: 25px;
+            position: absolute;
+            left: 0;
+            width: 216px;
+            padding-left: 38px;
+            height: 25px;
+            bottom: 0;
+            z-index: 10;
+            i{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 15px;
+                line-height: 15px;
+                padding: 5px;
+                font-style: normal;
+            }
+        }
+      }
+    }
+      .join-num {
+        font-size: 12px;
+        color: #a0a0a0;
+      }
+      .fee {
+        font-size: 18px;
+        color: #ff7e00;
+      }
+      .free {
+        color: #80d610;
+      }
+  }
+
+  .paginator {
+    margin-top: 20px;
+  }
+}

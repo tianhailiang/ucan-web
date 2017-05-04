@@ -1,0 +1,55 @@
+<div class="box-1on1 slider-outer" id="box-1on1" data-ox="55">
+    <div class="header-1on1">
+        <h2 class="title-bar">
+            <span>一对一专题</span>
+        </h2>
+
+        <div class="tl-btn-container" v-if="rowsOne.length>5">
+            <a class="tl-forward tl-btn">
+                <span class="tl-right-arrow"></span>
+            </a>
+            <a class="tl-backward tl-btn disabled">
+                <span class="tl-left-arrow"></span>
+            </a>
+        </div>
+    </div>
+
+    <ul class="cul course-type">
+        <li><a href="javascript:;"
+               v-bind:class="{'cur': currentNavId===navAllIds}"
+               v-on:click.prevent="currentNavId=navAllIds;changeClassNav('')">全部课程</a></li>
+        <li v-for="(item, index) in navList"
+            ><a href="javascript:;"
+            v-bind:class="{'cur': currentNavId===item.id}"
+            v-on:click.prevent="currentNavId=item.id;changeClassNav(item.id)"
+         v-text="item.topic"></a></li>
+    </ul>
+
+    <div class="slider-wrapper course-content">
+        <ul class="slider-el cf" v-bind:style="'width:'+(rowsOne.length*289) + 'px'">
+            <li v-for="(item, index) in rowsOne">
+            	<div class="course-box">
+	                <a v-bind:href="'./course.html?courseId=' + item.id ">
+	                    <span class="img" v-bind:style="'background-size:100% 100%;background-image:url(' + item.ucanFile + ')'">
+	                    	<span>
+	                    		<i v-bind:class="'bg-cc' + item.topic.id" v-text="item.topic.topic"></i>
+	                    		<em v-text="item.beginDate ? item.beginDate : '已结课'"></em>
+	                    	</span>
+	                    </span>
+	                	<p class="fn-w6"><span class="cOoo" v-text="item.mode == 'ooo' ? '1对1' : '直播'">1对1</span><em v-text="item.name"></em></p>
+		                <a style="margin:0" v-bind:href="'./pages/teacherHome/teacherHome.html?teacherId=' + item.teacher.id">
+		                	<span class="join-num"><em>授课老师：</em><em v-text="item.teacher.name"></em></span>
+		                </a>
+		                <span class="fee" v-bind:class="{free:item.cost === 0 || item.cost == null}" v-text="item.cost ? '￥' + item.cost : '免费'"></span>
+	                </a>
+            	</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    require.async('./1on1.js', function(app){
+        app.init();
+    });
+</script>

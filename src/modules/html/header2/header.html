@@ -1,0 +1,32 @@
+<header class="cf">
+    <a class="logo" href="./index.html"><img src="/modules/html/header/img/logo.png"/></a>
+
+    <nav>
+        <div class="search">
+            <select>
+                <option value="0">搜教师</option>
+                <option value="1">搜课程</option>
+            </select>
+            <input type="text" style="font-family:'Microsoft YaHei'" name="" id="">
+            <a href="javascript:;" class="b"></a>
+        </div>
+        <ul id="main-nav">
+            <li><a class="nav-index" href="./index.html">首页</a></li>
+            <li><a class="nav-classroom" href="./classroom.html">直播课堂</a></li>
+            <li><a href="./pages/teacherList/teacherList.html">名师国际</a></li>
+			<li><a href="./pages/courseList/courseList.html">一对一家教</a></li>
+<!--            <li><a href="#">微校</a></li>-->
+            <li><a class="nav-quxue" href="./quxue.html">趣学英语</a></li>
+<!--            <li><a href="#">智力游戏</a></li>-->
+            <li><a class="nav-about" href="./about.html">关于优看</a></li>
+<!--            <li><a href="#">下载APP</a></li>-->
+        </ul>
+    </nav>
+</header>
+
+<script>
+    require.async('./header.js', function(app){
+        app.init();
+       
+    });
+</script>

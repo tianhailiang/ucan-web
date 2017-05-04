@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的课程设置 - 优看 uCan</title>
+    <link rel="shortcut icon" href="../../img/ucan.ico">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="js/laydate/need/laydate.css"/>
+    <link rel="stylesheet" href="../../css/laypage.css" />
+    <link rel="stylesheet" href="../../css/public.css" />
+    <link rel="stylesheet" href="../../css/header.css"/>
+    <link rel="stylesheet" href="../../css/footer.css"/>
+    <!--<link rel="stylesheet" href="css/webuploader.css"/>-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="cf">
+    <a class="logo" href="../../index.html"><img src="../../img/logo.png" /></a>
+    <nav>
+        <div class="search">
+            <select>
+                <option value="0">搜教师</option>
+                <option value="1">搜课程</option>
+            </select>
+            <input type="text" name="" id="">
+            <a class="b"></a>
+        </div>
+        <ul>
+            <li><a class="nav-index" href="../../index.html">首页</a></li>
+            <li><a href="../../classroom.html">直播课堂</a></li>
+            <li><a href="../teacherList/teacherList.html">名师国际</a></li>
+            <li><a href="../courseList/courseList.html">一对一家教</a></li>
+            <!--            <li><a href="#">微校</a></li>-->
+            <li><a class="nav-quxue" href="../../quxue.html">趣学英语</a></li>
+            <!--            <li><a href="#">智力游戏</a></li>-->
+            <li><a class="nav-about" href="../../about.html">关于优看</a></li>
+            <!--            <li><a href="#">下载APP</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="content oh">
+    <div class="frame-nav fn-c0 bg-c0 oh">
+        <ul class="w c">
+            <li class="fl"><a class="homePage fn-c0" href="">个人中心首页
+                <span class="triangle-border-up"></span>
+            </a></li>
+            <li class="fl"><a class="setting fn-c0" href="">个人信息</a></li>
+        </ul>
+    </div>
+    <div class="frame-con w c">
+        <div class="frame-title fl">
+            <div class="frame-head">
+                <img src="../../img/logo.png" width="150px" height="150px" alt="">
+                <div class="frame-user bg-c1">
+                    <p>用户名</p>
+                    <p>ID 12345</p>
+                </div>
+            </div>
+            <div class="left-nva">
+                <ul>
+                    <li class="left-nva-a bg-c2">
+                        <a class="fn-c0" href="../myTimetable/T_myTimetable.html">我的课表</a>
+                    </li>
+                    <li class="left-nva-a bg-c2">
+                        <a class="fn-c0" href="../courseOpt/courseOpt.html">课程设置</a>
+                    </li>
+                    <li class="left-nva-a bg-c2">
+                        <a class="fn-c0" href="../myCourseVideo/myCourseVideoTeacher.html">直播回放</a>
+                    </li>
+                    <li class="left-nva-a bg-c2">
+                        <a class="fn-c0" href="../myStudent/myStudent.html">学生管理</a>
+                    </li>
+                    <li class="left-nva-a bg-c2">
+                        <a class="fn-c0" href="../teacherEvaluate/teacherEvaluate.html">评价管理</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="frame-rg bg-c2 fl oh">
+            <!--			*************内容*****************     -->
+            <div class="sc-top">
+                <h2>我的课程设置</h2>
+                <button class="btn" type="button">批量管理</button>
+            </div>
+            <div class="sc-kuang">
+                <div class="list-type"><div><span></span></div>全选</div>
+                 <div id="pages"></div>
+                	<button type="button" class="btn cancel">取消</button>
+                	<button type="button" class="btn delete">删除</button>
+            </div>
+            <button type="button" class="btn addcus">添加课程</button>
+            <ul class="sc-add-box">
+                <li>
+                    <label>课程名称</label>
+                    <input type="text" name="courseName" maxlength="20" placeholder="请输入20字以内" autofocus/>
+                </li>
+                <li class="sc-subject">
+                    <label>选择科目</label>
+                    <input class="hassel" type="text" name="subject" placeholder="语文/数学/英语" required readonly/>
+                    <span class="arrow"></span>
+                    <ul></ul>
+                </li>
+                <li>
+                    <label>课程类型</label>
+                    <input class="hassel" type="text" name="ctype" placeholder="直播课(班课)/一对一" required readonly/>
+                    <span class="arrow"></span>
+                    <ul>
+                        <li>直播课(班课)</li>
+                        <li>一对一</li>
+                    </ul>
+
+                </li>
+                <li>
+                    <label>标题</label>
+                    <input type="text" name="ctitle" maxlength="10" placeholder="请输入10字以内"/>
+                </li>
+                <li>
+                    <label>人数</label>
+                    <input type="number" name="ccount" maxlength="3" min="1" max="200" placeholder="请输入人数(针对班课)"/>
+                </li>
+                <li>
+                    <label>课程简介</label>
+                    <textarea type="text" name="cdescription" placeholder="请输入课程简介"></textarea>
+                </li>
+                <li>
+                    <label>添加封面</label>
+                    <div class="addpic" id="fileList">默认封面
+                    </div>
+                    <div id="upload" class="addpicdiv">
+                        <span></span>
+                        <span>添加图片</span>
+                    </div>
+                </li>
+                <li>
+                    <label>教学计划</label>
+                    <button class="btn addbtn sc-pi" type="button">批量添加课节</button>
+                    <button class="btn addbtn sc-addone" type="button">添加一个课节</button>
+                    <ul class="sc-plan">
+                    </ul>
+                </li>
+                <li>
+                    <button class="btn subcourse uploadSave">发布课程</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p><a href="../../index.html">首页</a> <span>|</span> <a href="../../about.html">关于优看</a> <span>|</span> <a href="../register/register.html">免费注册</a>
+        <br> ©2016 优看网络 版权所有</p>
+</div>
+
+<div class="canbox canbox-1">
+    <div class="sc-pop">
+        <a class="c-off" href="javascript:;"><img src="../../img/off.png" width="100%" alt=""></a>
+
+        <div class="sc-title">
+            <span>批量添加课节</span>
+            <p style="float:right;"></p>
+        </div>
+        <ul class="sc-date">
+            <li class="sday">
+                <div>
+                    <span>开课日期</span>
+                    <input placeholder="请选择开课日期" id="startday-pi" required>
+                </div>
+                <div>
+                    <span>结课日期</span>
+                    <input placeholder="请选择结课日期" id="endday-pi" required>
+                </div>
+            </li>
+            <li class="sss">
+                <span>开始时间</span>
+                <div class="selectdiv">
+                    <select name="hour1" class="beginTime_select t-hour" >
+                    	
+                    </select>
+                </div>
+                <div class="ml28 selectdiv">
+                	<select name="minute1" class="beginTime_select t-minu" >
+                   </select>
+                </div>
+                <span style="margin-left: 35px;">课程时长</span>
+                <div class="selectdiv">
+                	<select name="length_time1" class="beginTime_select t-durration" >
+                   </select>
+                </div>
+                <div class="sc-week">
+                    <ul>
+                        <li>周一<br/><input value="1" type="checkbox"/></li>
+                        <li>周二<br/><input value="2" type="checkbox"/></li>
+                        <li>周三<br/><input value="3" type="checkbox"/></li>
+                        <li>周四<br/><input value="4" type="checkbox"/></li>
+                        <li>周五<br/><input value="5" type="checkbox"/></li>
+                        <li>周六<br/><input value="6" type="checkbox"/></li>
+                        <li>周日<br/><input value="0" type="checkbox"/></li>
+                        <li>
+                            <button class="btn deldur">删除时段</button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <button class="addT" type="button"><i></i>添加新时段</button>
+        <div class="c-form">
+            <a href="javascript:;" class="bg-c1">确定</a>
+            <a href="javascript:;" class="bg-c4">取消</a>
+        </div>
+    </div>
+</div>
+<div class="canbox canbox-2">
+    <div class="sc-pop">
+        <a class="c-off" href="javascript:;"><img src="../../img/off.png" width="100%" alt=""></a>
+        <div class="sc-title">
+            <span>编辑课节</span>
+            <p style="float:right;"></p>
+        </div>
+        <ul class="sc-date">
+            <li class="one-sc">
+                <span>课程日期</span>
+                <input placeholder="请选择上课日期" id="startday-one" required readonly>
+            <!-- </li>
+            <li class="two-sc"> -->
+                <span>开始时间</span>
+                <div class="selectdiv">
+                	<select name="hour2" class="beginTime_select t-hour">
+                    	
+                   </select>
+                </div>
+                <div class="ml28 selectdiv">
+                	<select name="minute2" class="beginTime_select t-minu" >
+                   </select>
+                </div>
+                <span style="margin-left: 35px;">课程时长</span>
+                <div class="selectdiv">
+                	<select name="length_time2" class="beginTime_select t-durration" >
+                   </select>
+                </div>
+            </li>
+            <li class="one-text">
+                <span>课程简介</span>
+                <textarea placeholder="请输入200字以内(选填)" maxlength="200"></textarea>
+            </li>
+        </ul>
+        <div class="c-form">
+            <a href="javascript:;" class="bg-c1">确定</a>
+            <a href="javascript:;" class="bg-c4">取消</a>
+        </div>
+    </div>
+</div>
+<div class="canbox canbox-3">
+    <!-- 确认删除弹出框-->
+
+</div>
+<div class="canbox canbox-4">
+    <!-- 编辑课节-->
+    <div class="sc-pop">
+        <a class="c-off" href="javascript:;"><img src="../../img/off.png" width="100%" alt=""></a>
+
+        <div class="sc-title">
+            <span>编辑课节</span>
+            <p style="float:right;"></p>
+        </div>
+        <ul class="sc-date">
+            <li class="one-sc">
+                <span>课程日期</span>
+                <input placeholder="请选择上课日期" id="startday-edit" required readonly>
+            <!-- </li>
+            <li class="two-sc"> -->
+                <span>开始时间</span>
+                <div class="selectdiv">
+                	<select name="hour4" class="beginTime_select t-hour">
+                    	
+                   </select>
+                </div>
+                <div class="ml28 selectdiv">
+                	<select name="minute4" class="beginTime_select t-minu" >
+                   </select>
+                </div>
+                <span style="margin-left: 35px;">课程时长</span>
+                <div class="selectdiv">
+                	<select name="length_time4" class="beginTime_select t-durration" >
+                    	
+                   </select>
+                </div>
+            </li>
+            <li class="one-text edit">
+                <span>课程简介</span>
+                <textarea placeholder="请输入200字以内(选填)" maxlength="200"></textarea>
+            </li>
+        </ul>
+        <div class="c-form">
+            <a href="javascript:;" class="bg-c1">确定</a>
+            <a href="javascript:;" class="bg-c4">取消</a>
+        </div>
+    </div>
+</div>
+<div class="canbox canbox-5">
+    <div class="sc-pop">
+        <a class="c-off" href="javascript:;"><img src="../../img/off.png" width="100%" alt=""></a>
+        <div class="sc-title">
+            <span>整体修改时间</span>
+        </div>
+        <ul class="sc-date">
+            <li class="one-sc">
+                <span>课程日期</span>
+                <input placeholder="请选择上课日期" id="startday-all" required readonly>
+            </li>
+            <li class="two-sc">
+                <span>开始时间</span>
+                <div class="selectdiv">
+                	<select name="hour5" class="beginTime_select t-hour">
+                    	
+                   </select>
+                </div>
+                <div class="ml28 selectdiv">
+                	<select name="minute5" class="beginTime_select t-minu" >
+                   </select>
+                </div>
+                <span style="margin-left: 40px;">课程时长</span>
+                <div class="selectdiv">
+                	<select name="length_time5" class="beginTime_select t-durration" >
+                    	
+                   </select>
+                </div>
+            </li>
+            <li><p>请修改最近一节课的上课时间,后续课节会随之自动调整</p></li>
+        </ul>
+        <div class="c-form">
+            <a href="javascript:;" class="bg-c1">确定</a>
+            <a href="javascript:;" class="bg-c4">取消</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/userIf.js"></script>
+<script src="../../js/public.js"></script>
+<script src="../../js/webuploader.js"></script>
+<script src="../../js/layui/layui.js" charset="utf-8"></script>
+<script src="../../js/laypage.js"></script>
+<script src="js/addcourse.js"></script>
+</html>

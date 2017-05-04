@@ -1,0 +1,129 @@
+<div id="course-detail">
+    <div class="detail-header">
+        <div class="slider-box">
+            <div class="img-item"><img v-bind:src="co.courseImg"/></div>
+        </div>
+        <div class="slider-content">
+            <div class="detail-title" v-text="co.name"></div>
+            <div class="detail-info">
+                <span class="fee" v-bind:class="{free:co.cost === 0 || co.cost == null}" v-text="co.cost ? '￥' + co.cost : '免费'"></span>
+                <ul>
+                    <li class="collectS"><a v-on:click="collect()"><i></i>收藏</a></li>
+                    <li>已报<span v-text="co.countPeople" class="has-num"></span>人</li>
+                    <li>班级<span class="total-num" v-text="co.maxStudentCount"></span>人</li>
+                </ul>
+            </div>
+            <div class="class-info">
+                <p><em v-text="co.beginDate"></em>开课 - <em v-text="co.endDate"></em>结课</p>
+                <p v-text="co.mode === 'live' ? '在线授课' : (co.mode === 'ooo' ? '一对一授课' : '默认')"></p>
+            </div>
+            <div class="brand-info">
+                <ul>
+                    <li class="real-name" v-if="co.flag&4"></li>
+                    <li class="quality" v-if="co.flag&8"></li>
+                    <li class="join-every-time" v-if="co.flag&32"></li>
+                </ul>
+            </div>
+            <a class="to-check-class no-ready" v-on:click="getClasses" v-text="co.mode==='ooo' ? '立即约课' : '查看课程'"></a>
+            <a v-show="co.mode==='ooo' && judge.scheduleFlag" class="to-check-class no-ready" v-bind:href="'./pages/oooCourse/Student.html?roomId=' + judge.roomId " v-text="'进入教室'"></a>
+        
+        </div>
+    </div>
+
+    <div class="class-intro">
+        <div class="class-title">
+            <div class="title-inner">课程简介</div>
+        </div>
+        <div class="class-detail">
+            <p v-text="co.about">
+               
+            </p>
+            <!--
+            <p>课程内容：课程内容……</p>
+            <p>开课时间：2016.05.06 3：05 -- 3：09</p>
+            <p>注意事项：别迟到</p>
+            -->
+        </div>
+    </div>
+
+    <!--展示课程计划-->
+    <div class="class-modal" v-if="showClasses" v-bind:style="showClasses ? 'display:block' : ''" style="display: none">
+        <div class="modal-bg"></div>
+        <div class="modal-content class-modal-content">
+            <div class="modal-title">
+                <p>课程安排</p>
+                <span class="close-btn" v-on:click="showClasses=0"></span>
+            </div>
+            <div class="scan-all-container">
+                <ul class="class-select-ul">
+                    <li v-bind:class="{'has-select':item.rooms || item.scheduleFlag == 1 || item.endTime < newTimes}"
+                            class="select-li" data-val="1" v-for="(item, index) in rows">
+                        <input type="checkbox" class="checkboxSS checkbox"
+                               value="1"
+                               v-bind:checked="selectedCourse===index" v-on:click="changeChecked(index,rows)"
+                               v-bind:disabled="(item.rooms || item.scheduleFlag == 1 || item.endTime < newTimes)">
+                        <!--<input type="checkbox" || item.scheduleFlag == 1 v-model="item.checked" class="checkbox"
+                               value="1"
+                               v-bind:checked="selectedCourse===index"
+                               v-bind:disabled="new Date(item.beginTime).getTime() < new Date()"
+                               v-on:click="selectedCourse=index"
+                        >-->
+                        <span class="class-index">第<em v-text="index + 1"></em>节</span>
+                        <span class="class-title" v-text="item.coursePlans.courses.name"></span>
+                        <span class="class-time"><em v-text="item.beginTime"></em> - <em v-text="item.endTimeStr"></em></span>
+                        <span class="class-status" v-text="item.rooms ? (item.rooms.status == 1 ? '已结课' : '正在直播') : (item.scheduleFlag == 1 ? '已预约' : (item.endTime < newTimes ? '已失效' : '未开始'))"></span>
+                    </li>
+                </ul>
+                
+                <div class="class-footer">
+	                <label class="select-all-label">
+	                    <input type="checkbox" v-on:click="selectS(rows)" class="select-all"  id="select-all" value="全选">全选
+	                </label>
+	                <!--<div class="paginator">
+	                    <ul class="pagelist clearfix">
+	                        <li class="left">上一页</li>
+	                        <li>1</li>
+	                        <li>2</li>
+	                        <li>3</li>
+	                        <li class="right">下一页</li>
+	                    </ul>
+	                    <div class="countpage clearfix">
+	                        <div class="pagenumber">共<span>100</span>页</div>
+	                        <div class="goto">去第<input type="text">页</div>
+	                        <button class="confirm">确定</button>
+	                    </div>
+	                </div>-->
+                </div>
+                <a class="to-check-class" v-on:click="subscribeCourse(rows)">立即约课</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="class-modal" v-if="showClass" v-bind:style="showClass ? 'display:block' : ''" style="display: none">
+        <div class="modal-bg"></div>
+        <div class="modal-content class-modal-content">
+            <div class="modal-title">
+                <p>精品课</p>
+                <span class="close-btn" v-on:click="showClass=0"></span>
+            </div>
+            <div class="scan-all-container">
+                <ul class="class-select-uls">
+                    <li class="select-li" v-for="(items, index) in rowsS">
+                        <a v-bind:href="'./pages/tapedLessons/tapedLessons.html?rtmpUrl=' + items.hlsRecUrl1" class="class-indexs">播放</a>
+                        <span class="class-title" >
+                       		<span v-text="items.name"></span>
+                     		<em v-text="'（第'+ (index+1) +'节）'"></em>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    require.async('./detail.js', function (app) {
+        app.init();
+    });
+</script>
