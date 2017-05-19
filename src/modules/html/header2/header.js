@@ -32,6 +32,17 @@ module.exports = {
             case /classroom\.html/.test(url):
                 $nav.find('.nav-classroom').addClass('current');
                 break;
+            case /smallSchool\.html/.test(url):
+
+               $nav.find('.small_school').addClass('current');
+                break;
+            case /exquisiteClassroom\.html/.test(url):
+
+               $nav.find('.exquisite').addClass('current');
+               break;    
+
+               
+                    
         };
     },
 
@@ -67,6 +78,7 @@ module.exports = {
         if (!sessionStorage.obj) {
 
             str = '<aside class="no-login"><ul><li><a href="./pages/register/register.html">免费注册</a></li><li><a href="./pages/login/login.html">用户登录</a></li></ul></aside>';
+            
         } else if (userStr.user.groups == "teacher") {
             str = '<aside class="is-login"><div class="head-photo"><a href="' + userObjTea.personalInfo + '"><img width="100%" height="100%" src="' + userPhoto + '" alt=""></a></div><div class="user-box"><p class="user-name">' + userStr.user.name + '</p><div class="user-info-box"><a href="#" class="a user-notice-btn"></a><div class="a user-drop-down-btn" id="user-drop-down-btn"><span class="ico-profile"></span><div class="user-drop-down" id="user-drop-down"><div class="little-arrow"></div><div class="shadow-arrow"></div><ul class="true-list"><li><a href="' + userObjTea.myTimetable + '"><span class="ico-img ico-home"></span> 我的主页</a></li><li><a href="' + userObjTea.courseMan + '"><span class="ico-img ico-class-m"></span> 课程管理</a></li><li><a href="' + userObjTea.personalInfo + '"><span class="ico-img ico-setup"></span> 个人设置</a></li><li><a href="javascript:;"><span class="ico-img ico-go-away"></span> 退出登录</a></li></ul></div></div></div></div></aside>';
         } else if (userStr.user.groups == "student") {
@@ -86,6 +98,7 @@ module.exports = {
             sessionStorage.obj = "";
             window.location = "../../index.html";
         });
+
     },
     searchType: function () {
         var searchType = 0;

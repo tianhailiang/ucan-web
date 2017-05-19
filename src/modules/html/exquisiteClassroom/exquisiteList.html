@@ -1,0 +1,664 @@
+
+
+
+<div  id="app">
+        
+     
+
+        <router-view></router-view>
+
+</div>
+
+
+
+<style scoped>
+
+.arrow{
+  display: flex;
+  border:1px solid #dcdcdc;
+  height:30px;
+  border-radius: 10px;
+}
+
+.arrow span{
+  display: block;
+  width:30px;
+  height:30px;
+  text-align:center;
+  line-height:30px;
+}
+   
+.arrow span:nth-of-type(1){
+  border-right:1px solid #dcdcdc;
+}
+
+.arrow_font{
+  font-size:18px;
+  color:#dcdcdc;
+}
+
+.active{
+  color:#333;
+}
+
+
+
+</style>
+
+<template id="flip">
+  
+      <div class="arrow" >
+
+        
+          <span @click="previousPage">
+             <svg class="icon arrow_font" aria-hidden="true" :class="{active:preActive}">
+                  <use xlink:href="#icon-jiantou1"></use>
+             </svg>
+          </span>
+          <span @click="nextPage" >
+              <svg class="icon arrow_font" aria-hidden="true" :class="{active:nextActive}">
+                  <use xlink:href="#icon-jiantou"></use>
+             </svg>
+          </span>
+
+      </div>
+
+                
+</template>
+
+
+
+<style scoped>
+
+.school_box{
+  width:100%;
+  max-width:1440px;
+  height:1000px;
+ 
+  margin:0 auto;
+  padding-left:55px;
+  padding-right:55px;
+  box-sizing: border-box;
+
+}
+
+.school_head{
+  width:100%;
+  border-bottom:1px solid #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  
+}
+
+.school_type{
+  line-height:53px;
+  font-size:24px;
+  color:#a0a0a0;
+  border-bottom: 1px solid #02b8ea;
+  text-align:center;
+
+}
+
+
+.course_ul{
+  width:1440px;
+  padding-top: 55px;
+  display: flex;
+  
+
+}
+
+.course_ul li{
+  
+ padding-right:42px;
+ border-right:1px dashed #dcdcdc;
+ padding-left:40px;
+
+}
+
+.course_ul li:nth-of-type(1){
+  padding-left:0;
+
+}
+
+.course_ul li:nth-of-type(4n+0){
+ padding-right: 0;
+ border-right: 0
+}
+
+.course_ul li dl{
+  width:270px;
+  
+}
+
+.course_img{
+  width:100%;
+  height:150px;
+  border:1px solid #dcdcdc;
+}
+
+.course_ul li dl dd{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.course_div{
+  font-size: 16px;
+  color:#000;
+}
+
+.course_span{
+  display: inline-block;
+  width:40px;
+  height:20px;
+  background:#00b9f0;
+  text-align: center;
+  line-height: 20px;
+  color:#fff;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.teacher_div{
+  font-size: 12px;
+  color:#a2a2a2;
+  margin-top: 8px;
+  margin-bottom: 13px;
+}
+
+.money_div{
+  font-size: 14px;
+  color:#f8881c;
+}
+
+
+.chinese{
+  margin-top:70px;
+}
+
+
+.chinese_type{
+  border-color: #f39a9c;
+}
+
+.chinese_span{
+  background:#f39a9c;
+}
+
+.math_type{
+  border-color: #92c11b;
+}
+
+.math_span{
+  background:#92c11b;
+}
+
+.other_type{
+
+  border-color: #f39501;
+}
+
+.other_span{
+  background:#f39501;
+}
+
+.other{
+  margin-bottom: 70px;
+}
+
+</style>
+
+
+<template id="exquisiteList">
+
+     <div>
+          <link rel="import" href="/modules/html/header2/header.html?__inline"> 
+
+         <div class="school_box">
+
+            <div>
+
+                <div class="school_head">
+
+                      <div class="school_type" >英语课程</div>
+                      
+                     <flip-page v-on:flip="EnglishChangePage" :max-page="EmaxPage"></flip-page>
+                     
+
+                   </div>
+
+                    <ul class="course_ul">
+
+
+
+                     <router-link   tag="li" v-for="(item,index) in EnglishRows" :key="index" :to="{name:'recordingPlayback',params: { id:item.courseId }}">
+                        
+                         <dl>
+                           <dt>
+                            <img :src="item.courseImg" />
+                           </dt>
+                           <dd>
+                            <div class="course_div">
+                              <span class="course_span">英语</span>{{item.courseTitle}}
+                            </div>
+
+                            <div class="teacher_div">授课老师：{{item.courseTeacher}}</div>
+                            <div class="money_div">&yen;{{item.courseMoney}}</div>
+
+                           </dd>
+                         </dl>
+
+                     </router-link>  
+
+
+                    </ul>
+
+           </div>
+
+            <div class="chinese">
+
+                <div class="school_head">
+
+                      <div class="school_type chinese_type" >语文课程</div>
+                      
+                      <flip-page v-on:flip="ChineseChangePage" :max-page="CmaxPage"></flip-page>
+                     
+
+                   </div>
+
+                    <ul class="course_ul">
+
+
+
+                     <router-link   tag="li" v-for="(item,index) in ChineseRows" :key="index" :to="{name:'recordingPlayback',params: { id:item.courseId }}">
+                        
+                         <dl>
+                           <dt>
+                            <img :src="item.courseImg" />
+                           </dt>
+                           <dd>
+                            <div class="course_div">
+                              <span class="course_span chinese_span">语文</span>{{item.courseTitle}}
+                            </div>
+
+                            <div class="teacher_div">授课老师：{{item.courseTeacher}}</div>
+                            <div class="money_div">&yen;{{item.courseMoney}}</div>
+
+                           </dd>
+                         </dl>
+
+                     </router-link>  
+
+
+                    </ul>
+
+           </div>
+
+           <div class="chinese">
+
+                <div class="school_head">
+
+                      <div class="school_type math_type" >数学课程</div>
+                      
+                      <flip-page v-on:flip="MathChangePage" :max-page="MmaxPage"></flip-page>
+                     
+
+                   </div>
+
+                    <ul class="course_ul">
+
+
+
+                     <router-link   tag="li" v-for="(item,index) in MathRows" :key="index" :to="{name:'recordingPlayback',params: { id:item.courseId }}">
+                        
+                         <dl>
+                           <dt>
+                            <img :src="item.courseImg" />
+                           </dt>
+                           <dd>
+                            <div class="course_div">
+                              <span class="course_span math_span">数学</span>{{item.courseTitle}}
+                            </div>
+
+                            <div class="teacher_div">授课老师：{{item.courseTeacher}}</div>
+                            <div class="money_div">&yen;{{item.courseMoney}}</div>
+
+                           </dd>
+                         </dl>
+
+                     </router-link>  
+
+
+                    </ul>
+
+           </div>
+
+
+            <div class="chinese other">
+
+                <div class="school_head">
+
+                      <div class="school_type other_type" >其他课程</div>
+                  
+                     <flip-page v-on:flip="OtherChangePage" :max-page="OmaxPage"></flip-page>
+                     
+
+                   </div>
+
+                    <ul class="course_ul">
+
+
+
+                     <router-link   tag="li" v-for="(item,index) in OtherRows" :key="index" :to="{name:'recordingPlayback',params: { id:item.courseId }}">
+                        
+                         <dl>
+                           <dt>
+                            <img :src="item.courseImg" />
+                           </dt>
+                           <dd>
+                            <div class="course_div">
+                              <span class="course_span other_span">其他</span>{{item.courseTitle}}
+                            </div>
+
+                            <div class="teacher_div">授课老师：{{item.courseTeacher}}</div>
+                            <div class="money_div">&yen;{{item.courseMoney}}</div>
+
+                           </dd>
+                         </dl>
+
+                     </router-link>  
+
+
+                    </ul>
+
+           </div>
+
+       </div>
+      
+ </div>
+  
+  
+</template>
+
+
+
+<style type="text/css" scoped>
+
+.recording_top{
+  width:100%;
+  background:#6b3906;
+  height:40px;
+}
+
+.recording_img{
+  height:40px;
+}
+
+.recording_box{
+  width:100%;
+  display: flex;
+  background:#555555;
+
+}
+
+.video_window{
+  flex:1;
+  height:840px;
+  background:#fef2b8;
+  margin:30px 77px 34px;
+}
+  
+.recording_right{
+  
+}
+
+.teacher{
+  padding:30px 40px 27px;
+  background:#fef2b8;
+}
+
+.teacher_info{
+  display: flex;
+  align-items: center;
+}
+
+.teacher_img{
+  width:80px;
+  height:80px;
+
+
+}
+
+.teacher_name{
+  margin-left: 14px;
+  font-size: 18px;
+  color:#f49a00;
+}
+
+.teacher_evaluate{
+  width:200px;
+  height:28px;
+  background:#f39801;
+  color:#fff;
+  text-align: center;
+  line-height: 28px;
+  color:#fff;
+  border-radius: 5px;
+  margin-top:22px;
+}
+
+.teacher_evaluate:active{
+  background:rgba(243,152,1,0.7);
+}
+
+.course_list{
+  width:280px;
+  margin-top: 20px;
+}
+
+.course_title{
+  background:#00a1e9;
+  height:32px;
+  text-align:center;
+  line-height: 32px;
+  color:#fff;
+  font-size: 17px
+}
+
+.recording_ul{
+  background:#c4f9ff;
+  padding-left: 27px;
+  padding-top: 26px;
+  
+}
+
+.recording_ul li{
+  font-size: 14px;
+  color:#7c9c99;
+  padding-bottom: 17px;
+  cursor: pointer;
+}
+
+.hua{
+
+  font-size: 22px;
+  color:#dbdbdb;
+}
+
+.hua_active{
+  color:#6b3906;
+}
+
+.score{
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 27px;
+}
+
+.score span{
+  margin-right: 10px;
+}
+
+
+.course_footer{
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.course_footer span{
+  display: block;
+  width:120px;
+  height:35px;
+  border:1px solid #6b3906;
+  text-align:center;
+  line-height: 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  color:#6d3b0a;
+}
+
+.course_footer .spanActive{
+  color:#fff;
+  background:#6b3906;
+}
+
+.course_footer .spanActive:active{
+  background:rgba(107,57,6,0.7);
+}
+
+.course_footer span:nth-of-type(1){
+  margin-right: 27px;
+}
+
+</style>
+
+<style type="text/css" media="screen">
+.el-dialog__body {
+    padding: 30px 50px;
+    
+}
+
+.el-dialog--tiny {
+    width: 50%;
+}
+  
+.el-textarea__inner{
+  height:230px;
+}
+
+</style>
+
+<template id="recording">
+
+  <div>
+    
+      <div class="recording_top">
+           <img src="http://localhost:8080/img/ucan_logo1.png" class="recording_img">
+
+      </div>
+
+      <div class="recording_box">
+        
+         <div class="video_window">
+
+            <video  controls width="100%"  height="100%" ref="courseVideo" autoplay :src="source" >
+        <!--   <source :src="source" :type="'video/'+type"> -->
+         
+        
+           </video>
+
+
+         </div>
+
+         <aside class="recording_right">
+
+            <div class="teacher" >
+               <div class="teacher_info">
+                          <div  class="teacher_img" :style="{background:'url('+teacherPhoto+') no-repeat center',backgroundSize:'80px,80px'}"></div>
+                           
+                           <span class="teacher_name">{{teacherName}}</span> 
+                 </div>
+
+                 <button class="teacher_evaluate" @click="dialogVisible = true">给老师评价</button>
+
+
+            </div>
+
+            <div class="course_list">
+
+                  <h3 class="course_title">课程列表</h3>
+                  <ul class="recording_ul">
+
+                      <li v-for="(item,index) in courseList" :key="index" @click="coursePlay(item.source,item.type)">
+                         
+                         <span >第{{index | transChineseNumber(index)}}节</span>
+                         <span>{{item.courseName}}</span>
+                      </li>
+                       
+
+                  </ul>
+
+            </div>
+          
+         </aside>
+
+
+      </div>
+
+      <el-dialog  :visible.sync="dialogVisible" size="tiny" >
+      <div class="score">
+         <span>评分:</span>
+
+         <svg class="icon hua" aria-hidden="true" @click="scoreCount(1)" :class="{hua_active:flowerList[0]}">
+                  <use xlink:href="#icon-hua"></use>
+             </svg>
+             <svg class="icon hua" aria-hidden="true"  @click="scoreCount(2)" :class="{hua_active:flowerList[1]}">
+                  <use xlink:href="#icon-hua"></use>
+             </svg>
+              <svg class="icon hua" aria-hidden="true"  @click="scoreCount(3)" :class="{hua_active:flowerList[2]}">
+                  <use xlink:href="#icon-hua"></use>
+             </svg>
+              <svg class="icon hua" aria-hidden="true"  @click="scoreCount(4)" :class="{hua_active:flowerList[3]}">
+                  <use xlink:href="#icon-hua"></use>
+             </svg>
+              <svg class="icon hua" aria-hidden="true"  @click="scoreCount(5)" :class="{hua_active:flowerList[4]}">
+                  <use xlink:href="#icon-hua"></use>
+             </svg>
+
+      </div>
+
+       <el-form :model="form" class="teacher_area">
+                 
+                 <el-input type="textarea" v-model="form.desc" placeholder="请输入对老师的评价" ></el-input>
+
+       </el-form>
+       <div class="course_footer" >
+    
+           <span @click="dialogVisible = false" >取 消</span>
+           <span  @click="submitComments()" class="spanActive">提交评价</span>
+       </div> 
+    </el-dialog>
+
+  </div>
+  
+
+</template>
+
+
+
+
+
+<script>
+    require.async('./exquisiteList.js', function(app){
+        app.init();
+
+    });
+
+
+</script>

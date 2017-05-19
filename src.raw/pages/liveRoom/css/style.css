@@ -86,7 +86,7 @@ html {
 	width: 12px;
 	height: 14px;
 	margin: 5px auto;
-	background: url("../../../img/left-right-san.png") no-repeat -17px;
+	background: url("/img/left-right-san.png") no-repeat -17px;
 }
 .stu-comment2 .stu-talk{
 	/*display: none;*/
@@ -101,7 +101,7 @@ html {
 .talk-username{
 	padding-left: 10px;
 }
-#closeBtn{display: inline-block;height: 40px;width: 40px;border-radius: 50%;position: absolute;top: 0;right: 0;background: url("../../../img/off.png") no-repeat top center;cursor: pointer;}
+#closeBtn{display: inline-block;height: 40px;width: 40px;border-radius: 50%;position: absolute;top: 0;right: 0;background: url("/img/off.png") no-repeat top center;cursor: pointer;}
 .coursewareBox{overflow-y: scroll;}
 .coursewareList.active .coursewareSize{color: #8FC31F;}
 .coursewareBox .coursewareList{margin-top: 10px;}

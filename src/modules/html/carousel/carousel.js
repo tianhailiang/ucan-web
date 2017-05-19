@@ -4,6 +4,7 @@ module.exports = {
 
     init: function () {
         var wd = $(window).width();
+        
         $(function () {
             $('.carousel').css(
                 {

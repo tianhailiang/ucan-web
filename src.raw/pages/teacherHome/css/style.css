@@ -31,7 +31,7 @@
     margin-right: 5px;
     width: 19px;
     height: 17px;
-    background: url('../../../img/i-sc.png') no-repeat;
+    background: url('/img/i-sc.png') no-repeat;
 }
 .collection{
 	z-index: 99;

@@ -75,14 +75,14 @@ header .is-login .user-box .user-info-box .a img {
   left: 8px;
 }
 header .is-login .user-box .user-info-box .user-notice-btn {
-  background: url(../img/letter.png) no-repeat 50% 50%;
+  background: url(/img/letter.png) no-repeat 50% 50%;
   background-size: 23px 23px;
 }
 header .is-login .user-box .user-info-box .user-drop-down-btn {
   box-shadow: inset 1px 0 0 #8E6A46;
 }
 header .is-login .user-box .user-info-box .ico-profile {
-  background: url(../img/profile.png) no-repeat 50% 50%;
+  background: url(/img/profile.png) no-repeat 50% 50%;
   background-size: 20px 20px;
   display: block;
   width: 34px;
@@ -187,7 +187,7 @@ header nav .search input {
 }
 header nav .search .b {
   position: absolute;
-  background: url(../img/top.png) no-repeat 2px 5px;
+  background: url(/img/top.png) no-repeat 2px 5px;
   width: 24px;
   height: 24px;
   border: none;
@@ -246,26 +246,26 @@ header .ico-img {
   height: 16px;
 }
 header .ico-home {
-  background: url(../img/room.png);
+  background: url(/img/room.png);
   background-size: cover;
 }
 header .ico-class-m {
-  background: url(../img/class-manage.png);
+  background: url(/img/class-manage.png);
   background-size: cover;
 }
 header .ico-trade-m {
-  background: url(../img/trade-manage.png);
+  background: url(/img/trade-manage.png);
   background-size: cover;
 }
 header .ico-dollar {
-  background: url(../img/dollar.png);
+  background: url(/img/dollar.png);
   background-size: cover;
 }
 header .ico-setup {
-  background: url(../img/setup.png);
+  background: url(/img/setup.png);
   background-size: cover;
 }
 header .ico-go-away {
-  background: url(../img/go-away.png);
+  background: url(/img/go-away.png);
   background-size: cover;
 }

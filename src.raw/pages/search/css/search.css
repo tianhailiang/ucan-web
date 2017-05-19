@@ -130,7 +130,7 @@ p.slide img{
 	display: inline-block;
 	width: 10px;
 	height: 10px;
-	background: url("../img/up_03.png") no-repeat bottom;
+	background: url("/pages/search/img/up_03.png") no-repeat bottom;
 	margin-top: 3px;
 	margin-left: 3px;
 }

@@ -62,7 +62,7 @@ html {
 	width: 12px;
 	height: 14px;
 	margin: 5px auto;
-	background: url("../../../img/left-right-san.png") no-repeat -17px;
+	background: url("/img/left-right-san.png") no-repeat -17px;
 }
 .stu-talk a{
 	display: block;

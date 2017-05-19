@@ -35,7 +35,7 @@ a.btn{border: 1px solid #6a3906;border-radius: 6px;}
 #promptBox ul{border: 1px solid #dcdcdc;box-sizing:border-box;overflow: hidden;}
 #promptBox ul li{display: table-cell;vertical-align: middle;width: 20%;padding: 30px;box-sizing: border-box;min-height: 200px;}
 #promptBox ul li.br-r{border-right: 1px solid #dcdcdc;}
-#closeBtn{display: inline-block;height: 40px;width: 40px;border-radius: 50%;position: absolute;top: 0;right: 0;background: url("../img/off.png") no-repeat top center;cursor: pointer;}
+#closeBtn{display: inline-block;height: 40px;width: 40px;border-radius: 50%;position: absolute;top: 0;right: 0;background: url("/img/off.png") no-repeat top center;cursor: pointer;}
 /*登录弹出提示框样式*/
 /*隐藏 约课编号*/
 .coursePhotoText p:nth-of-type(3){display: none;}

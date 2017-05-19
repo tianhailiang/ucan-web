@@ -47,7 +47,7 @@ fis.match('/components/**', {
     release: '${project.static}/$&'
 });
 
-fis.match('/components/**.css', {
+fis.match('/components/**', {
     isMod: true,
     release: '${project.static}/$&'
 });

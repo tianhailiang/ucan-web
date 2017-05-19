@@ -157,7 +157,7 @@ img{
 .w25{width: 25%;}
 .pos-r{position: relative;}
 .pos-a{position: absolute;}
-.icon-up{display: inline-block;width: 10px;height: 10px;background: url("../img/up_03.png") no-repeat bottom;margin-top: 3px;margin-left: 3px;}
+.icon-up{display: inline-block;width: 10px;height: 10px;background: url("/img/up_03.png") no-repeat bottom;margin-top: 3px;margin-left: 3px;}
 .red{color: red;}
 /*韩月辉*/
 

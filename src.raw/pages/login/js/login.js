@@ -1,4 +1,4 @@
-﻿$(function () {
+$(function () {
 	var b = new Base64();
 	//	$("#login").on("click", "span", function () {
 	//		var _index = $(this).index();
